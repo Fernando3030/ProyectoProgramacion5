@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidad\Movimiento.cs" />
     <Compile Include="Presentacion\BuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +72,11 @@
     <Compile Include="Entidad\ComboItem.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Entidad\DetalleFactura.cs" />
-    <Compile Include="Presentacion\EntradaProductos.cs">
+    <Compile Include="Presentacion\Movimientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\EntradaProductos.Designer.cs">
-      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    <Compile Include="Presentacion\Movimientos.Designer.cs">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidad\FacturaC.cs" />
     <Compile Include="Presentacion\FacturaCliente.cs">
@@ -155,12 +156,6 @@
     <Compile Include="Presentacion\ReporteProveedores.Designer.cs">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\SalidaProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\SalidaProductos.Designer.cs">
-      <DependentUpon>SalidaProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entidad\Usuarios.cs" />
     <Compile Include="Negocio\Validaciones.cs" />
     <Compile Include="Presentacion\VentanaPrincipalNuevo.cs">
@@ -172,8 +167,8 @@
     <EmbeddedResource Include="Presentacion\BuscarCliente.resx">
       <DependentUpon>BuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\EntradaProductos.resx">
-      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Movimientos.resx">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FacturaCliente.resx">
       <DependentUpon>FacturaCliente.cs</DependentUpon>
@@ -217,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ReporteProveedores.resx">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\SalidaProductos.resx">
-      <DependentUpon>SalidaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\VentanaPrincipalNuevo.resx">
       <DependentUpon>VentanaPrincipalNuevo.cs</DependentUpon>

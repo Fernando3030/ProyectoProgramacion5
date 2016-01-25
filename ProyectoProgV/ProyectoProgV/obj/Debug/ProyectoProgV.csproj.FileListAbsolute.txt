@@ -61,6 +61,5 @@ C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoPr
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistroProveedores.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistroUsuarios.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.ReporteProveedores.resources
-C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.SalidaProductos.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.VentanaPrincipalNuevo.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csproj.GenerateResource.Cache

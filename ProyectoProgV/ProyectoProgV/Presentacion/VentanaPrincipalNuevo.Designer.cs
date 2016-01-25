@@ -55,8 +55,6 @@
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
             this.btnMovimiento = new DevComponents.DotNetBar.ButtonItem();
-            this.btnEntradaP = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSalidaP = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
             this.btnCategoria = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
@@ -99,9 +97,9 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControl1.ForeColor = System.Drawing.Color.SaddleBrown;
@@ -574,10 +572,10 @@
             this.ribbonPanel4.Controls.Add(this.ribbonBar3);
             this.ribbonPanel4.Controls.Add(this.ribbonBar2);
             this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 59);
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 61);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(737, 102);
+            this.ribbonPanel4.Size = new System.Drawing.Size(737, 100);
             // 
             // 
             // 
@@ -611,7 +609,7 @@
             this.btnMovimiento});
             this.ribbonBar4.Location = new System.Drawing.Point(203, 0);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(100, 99);
+            this.ribbonBar4.Size = new System.Drawing.Size(100, 97);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 2;
             this.ribbonBar4.Text = "Movimientos";
@@ -629,26 +627,8 @@
             // 
             this.btnMovimiento.Image = global::ProyectoProgV.Properties.Resources.shop_cart_add_icon;
             this.btnMovimiento.Name = "btnMovimiento";
-            this.btnMovimiento.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnEntradaP,
-            this.btnSalidaP});
             this.btnMovimiento.SubItemsExpandWidth = 14;
-            // 
-            // btnEntradaP
-            // 
-            this.btnEntradaP.Image = global::ProyectoProgV.Properties.Resources.addP;
-            this.btnEntradaP.Name = "btnEntradaP";
-            this.btnEntradaP.Text = "Entrada Producto";
-            this.btnEntradaP.Tooltip = "Sirve para realizar aumento de stock a un producto";
-            this.btnEntradaP.Click += new System.EventHandler(this.btnEntradaP_Click);
-            // 
-            // btnSalidaP
-            // 
-            this.btnSalidaP.Image = global::ProyectoProgV.Properties.Resources.Remove_item_icon;
-            this.btnSalidaP.Name = "btnSalidaP";
-            this.btnSalidaP.Text = "Salidad Producto";
-            this.btnSalidaP.Tooltip = "sirve para reducir el stock de algun producto";
-            this.btnSalidaP.Click += new System.EventHandler(this.btnSalidaP_Click);
+            this.btnMovimiento.Click += new System.EventHandler(this.btnMovimiento_Click);
             // 
             // ribbonBar3
             // 
@@ -668,7 +648,7 @@
             this.btnCategoria});
             this.ribbonBar3.Location = new System.Drawing.Point(103, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(100, 99);
+            this.ribbonBar3.Size = new System.Drawing.Size(100, 97);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 1;
             this.ribbonBar3.Text = "Categoria";
@@ -707,7 +687,7 @@
             this.btnProducto});
             this.ribbonBar2.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(100, 99);
+            this.ribbonBar2.Size = new System.Drawing.Size(100, 97);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 0;
             this.ribbonBar2.Text = "Producto";
@@ -934,8 +914,6 @@
         private DevComponents.DotNetBar.ButtonItem btnCategoria;
         private DevComponents.DotNetBar.RibbonBar ribbonBar4;
         private DevComponents.DotNetBar.ButtonItem btnMovimiento;
-        private DevComponents.DotNetBar.ButtonItem btnEntradaP;
-        private DevComponents.DotNetBar.ButtonItem btnSalidaP;
         private DevComponents.DotNetBar.RibbonBar ribbonBar5;
         private DevComponents.DotNetBar.ButtonItem btnReportUsuarios;
         private DevComponents.DotNetBar.RibbonBar ribbonBar6;

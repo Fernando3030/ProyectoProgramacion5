@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoProgV.Entidad;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -889,7 +890,7 @@ namespace ProyectoProgV
 
             using (SqlConnection conexion = Conexion.obtenerConexion())
             {
-                SqlCommand comando = new SqlCommand("Select cod_producto, producto, fecha_vencimiento, precio_compra, precio_venta from producto", conexion);
+                SqlCommand comando = new SqlCommand("Select cod_producto, producto, fecha_vencimiento, precio_compra, precio_venta from producto where estado_producto = 'true'", conexion);
                 SqlDataAdapter da = new SqlDataAdapter(comando);
                 da.Fill(dt);
                 conexion.Close();
@@ -946,6 +947,32 @@ namespace ProyectoProgV
             using (SqlConnection con = Conexion.obtenerConexion())
             {
                 SqlCommand comando = new SqlCommand(string.Format("Insert into producto(cod_producto, cod_categoria, cod_proveedor, producto, fecha_vencimiento, stock, precio_compra, precio_venta, estado_producto) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", producto.Codigo, producto.Categoria, producto.Proveedor, producto.Producto1, producto.FechaV, producto.Stock, producto.PrecioC, producto.PrecioV, producto.Estado), con);
+                retorno = comando.ExecuteNonQuery();
+
+                con.Close();
+            }
+            return retorno;
+        }
+
+        public static int InsertarEntradaProducto(Movimiento producto)
+        {
+            int retorno = 0; // en el caso de que no se inserter el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Insert into entradaProductos(cod_entrada, cod_producto, recibir, fecha_vencimiento, precio_compra, precio_venta) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", producto.CodigoM, producto.CodigoP, producto.Cantidad,  producto.Fecha,  producto.PrecioC, producto.PrecioV ), con);
+                retorno = comando.ExecuteNonQuery();
+
+                con.Close();
+            }
+            return retorno;
+        }
+
+        public static int InsertarSalidaProducto(Movimiento producto)
+        {
+            int retorno = 0; // en el caso de que no se inserter el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Insert into salidaProductos(cod_salida, cod_producto, retirar, fecha_vencimiento, precio_compra, precio_venta) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", producto.CodigoM, producto.CodigoP, producto.Cantidad, producto.Fecha, producto.PrecioC, producto.PrecioV), con);
                 retorno = comando.ExecuteNonQuery();
 
                 con.Close();
@@ -1128,6 +1155,20 @@ namespace ProyectoProgV
                 con.Close();
             }
           //  return retorno;
+        }
+
+        public static int ActualizarStock3(string codigo, int stock, string fecha)
+        {
+            int retorno = 0; // en el caso de que no se borre el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("update producto set stock='" + stock + "',  fecha_vencimiento='" +fecha +  "' where cod_producto like '" + codigo + "'", con);
+                retorno = comando.ExecuteNonQuery();
+                con.Close();
+            }
+
+            return retorno;
+            //  return retorno;
         }
 
         public static void ActualizarStock2(string producto, int stock)

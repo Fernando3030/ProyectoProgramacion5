@@ -145,16 +145,12 @@ namespace ProyectoProgV
 
         private void btnEntradaP_Click(object sender, EventArgs e)
         {
-            this.Close();
-            EntradaProductos entrada = new EntradaProductos();
-            entrada.Show();
+            
         }
 
         private void btnSalidaP_Click(object sender, EventArgs e)
         {
-            this.Close();
-            SalidaProductos salida = new SalidaProductos();
-            salida.Show();
+            
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)
@@ -174,6 +170,13 @@ namespace ProyectoProgV
         private void btnReportProvee_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnMovimiento_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            EntradaProductos entrada = new EntradaProductos();
+            entrada.Show();
         }
 
        
