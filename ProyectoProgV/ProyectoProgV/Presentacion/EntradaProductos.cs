@@ -16,5 +16,15 @@ namespace ProyectoProgV
         {
             InitializeComponent();
         }
+
+        private void EntradaProductos_Load(object sender, EventArgs e)
+        {
+            dataGridView.Rows.Clear();
+            dataGridView.DataSource = MetodosBD.cargarProductos3();
+
+
+
+            dataGridView.ClearSelection();
+        }
     }
 }

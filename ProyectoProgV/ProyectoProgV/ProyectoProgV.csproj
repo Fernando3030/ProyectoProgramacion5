@@ -59,147 +59,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscarCliente.cs">
+    <Compile Include="Presentacion\BuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarCliente.Designer.cs">
+    <Compile Include="Presentacion\BuscarCliente.Designer.cs">
       <DependentUpon>BuscarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Categoria.cs" />
-    <Compile Include="Ciudad.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="ComboItem.cs" />
-    <Compile Include="Conexion.cs" />
-    <Compile Include="DetalleFactura.cs" />
-    <Compile Include="EntradaProductos.cs">
+    <Compile Include="Entidad\Categoria.cs" />
+    <Compile Include="Entidad\Ciudad.cs" />
+    <Compile Include="Entidad\Cliente.cs" />
+    <Compile Include="Entidad\ComboItem.cs" />
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Entidad\DetalleFactura.cs" />
+    <Compile Include="Presentacion\EntradaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntradaProductos.Designer.cs">
+    <Compile Include="Presentacion\EntradaProductos.Designer.cs">
       <DependentUpon>EntradaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacturaC.cs" />
-    <Compile Include="FacturaCliente.cs">
+    <Compile Include="Entidad\FacturaC.cs" />
+    <Compile Include="Presentacion\FacturaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturaCliente.Designer.cs">
+    <Compile Include="Presentacion\FacturaCliente.Designer.cs">
       <DependentUpon>FacturaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacturaProveedores.cs">
+    <Compile Include="Presentacion\FacturaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturaProveedores.Designer.cs">
+    <Compile Include="Presentacion\FacturaProveedores.Designer.cs">
       <DependentUpon>FacturaProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Presentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Presentacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="lectorPDF.cs">
+    <Compile Include="Presentacion\lectorPDF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="lectorPDF.Designer.cs">
+    <Compile Include="Presentacion\lectorPDF.Designer.cs">
       <DependentUpon>lectorPDF.cs</DependentUpon>
     </Compile>
-    <Compile Include="MetodosBD.cs" />
-    <Compile Include="PanelProfile.cs">
+    <Compile Include="Datos\MetodosBD.cs" />
+    <Compile Include="Presentacion\PanelProfile.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PanelTransparente.cs">
+    <Compile Include="Presentacion\PanelTransparente.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Producto.cs" />
-    <Compile Include="Profile.cs">
+    <Compile Include="Entidad\Producto.cs" />
+    <Compile Include="Presentacion\Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Profile.Designer.cs">
+    <Compile Include="Presentacion\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedor.cs" />
-    <Compile Include="Prueba.cs">
+    <Compile Include="Entidad\Proveedor.cs" />
+    <Compile Include="Presentacion\RegistrarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RegistrarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistrarCategoria.Designer.cs">
+    <Compile Include="Presentacion\RegistrarCategoria.Designer.cs">
       <DependentUpon>RegistrarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarProducto.cs">
+    <Compile Include="Presentacion\RegistrarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarProducto.Designer.cs">
+    <Compile Include="Presentacion\RegistrarProducto.Designer.cs">
       <DependentUpon>RegistrarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroClientes.cs">
+    <Compile Include="Presentacion\RegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroClientes.Designer.cs">
+    <Compile Include="Presentacion\RegistroClientes.Designer.cs">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroProveedores.cs">
+    <Compile Include="Presentacion\RegistroProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroProveedores.Designer.cs">
+    <Compile Include="Presentacion\RegistroProveedores.Designer.cs">
       <DependentUpon>RegistroProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroUsuarios.cs">
+    <Compile Include="Presentacion\RegistroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroUsuarios.Designer.cs">
+    <Compile Include="Presentacion\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteProveedores.cs">
+    <Compile Include="Presentacion\ReporteProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteProveedores.Designer.cs">
+    <Compile Include="Presentacion\ReporteProveedores.Designer.cs">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalidaProductos.cs">
+    <Compile Include="Presentacion\SalidaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalidaProductos.Designer.cs">
+    <Compile Include="Presentacion\SalidaProductos.Designer.cs">
       <DependentUpon>SalidaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs" />
-    <Compile Include="Validaciones.cs" />
-    <Compile Include="VentanaPrincipal.cs">
+    <Compile Include="Entidad\Usuarios.cs" />
+    <Compile Include="Negocio\Validaciones.cs" />
+    <Compile Include="Presentacion\VentanaPrincipalNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaPrincipal.Designer.cs">
-      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VentanaPrincipalNuevo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentanaPrincipalNuevo.Designer.cs">
+    <Compile Include="Presentacion\VentanaPrincipalNuevo.Designer.cs">
       <DependentUpon>VentanaPrincipalNuevo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BuscarCliente.resx">
+    <EmbeddedResource Include="Presentacion\BuscarCliente.resx">
       <DependentUpon>BuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntradaProductos.resx">
+    <EmbeddedResource Include="Presentacion\EntradaProductos.resx">
       <DependentUpon>EntradaProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacturaCliente.resx">
+    <EmbeddedResource Include="Presentacion\FacturaCliente.resx">
       <DependentUpon>FacturaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacturaProveedores.resx">
+    <EmbeddedResource Include="Presentacion\FacturaProveedores.resx">
       <DependentUpon>FacturaProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Presentacion\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="lectorPDF.resx">
+    <EmbeddedResource Include="Presentacion\lectorPDF.resx">
       <DependentUpon>lectorPDF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
+    <EmbeddedResource Include="Presentacion\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -212,34 +200,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarCategoria.resx">
+    <EmbeddedResource Include="Presentacion\RegistrarCategoria.resx">
       <DependentUpon>RegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarProducto.resx">
+    <EmbeddedResource Include="Presentacion\RegistrarProducto.resx">
       <DependentUpon>RegistrarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroClientes.resx">
+    <EmbeddedResource Include="Presentacion\RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroProveedores.resx">
+    <EmbeddedResource Include="Presentacion\RegistroProveedores.resx">
       <DependentUpon>RegistroProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroUsuarios.resx">
+    <EmbeddedResource Include="Presentacion\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteProveedores.resx">
+    <EmbeddedResource Include="Presentacion\ReporteProveedores.resx">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalidaProductos.resx">
+    <EmbeddedResource Include="Presentacion\SalidaProductos.resx">
       <DependentUpon>SalidaProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentanaPrincipal.resx">
-      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentanaPrincipalNuevo.resx">
+    <EmbeddedResource Include="Presentacion\VentanaPrincipalNuevo.resx">
       <DependentUpon>VentanaPrincipalNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

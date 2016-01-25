@@ -883,6 +883,21 @@ namespace ProyectoProgV
             return dt;
         }
 
+        public static DataTable cargarProductos3()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select cod_producto, producto, fecha_vencimiento, precio_compra, precio_venta from producto", conexion);
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                da.Fill(dt);
+                conexion.Close();
+            }
+
+            return dt;
+        }
+
         public static DataTable cargarProductos2()
         {
             DataTable dt = new DataTable();

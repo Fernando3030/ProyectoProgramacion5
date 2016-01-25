@@ -32,3 +32,35 @@ D:\ingenieria en sistemas\Fernando sexto semestre\Programacion 5\Programas n c# 
 D:\ingenieria en sistemas\Fernando sexto semestre\Programacion 5\Programas n c# 6to semestre\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csproj.ResolveComReference.cache
 D:\ingenieria en sistemas\Fernando sexto semestre\Programacion 5\Programas n c# 6to semestre\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.lectorPDF.resources
 D:\ingenieria en sistemas\Fernando sexto semestre\Programacion 5\Programas n c# 6to semestre\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Profile.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\ProyectoProgV.exe.config
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csproj.ResolveComReference.cache
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.exe
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.pdb
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\ProyectoProgV.exe
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\ProyectoProgV.pdb
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\MetroFramework.Design.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\MetroFramework.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\System.Windows.Forms.Ribbon35.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.BuscarCliente.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.EntradaProductos.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.FacturaCliente.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.FacturaProveedores.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Login.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.lectorPDF.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Profile.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistrarCategoria.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistrarProducto.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistroClientes.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistroProveedores.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.RegistroUsuarios.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.ReporteProveedores.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.SalidaProductos.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.VentanaPrincipalNuevo.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csproj.GenerateResource.Cache
