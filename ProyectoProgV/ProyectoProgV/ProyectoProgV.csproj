@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C5602F8-F885-4CDE-84D8-113AE451C750}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoProgV</RootNamespace>
+    <AssemblyName>ProyectoProgV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework">
+      <HintPath>C:\Users\Usuario\Documents\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>C:\Users\Usuario\Documents\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>C:\Users\Usuario\Documents\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>C:\Users\Usuario\Documents\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs" />
+    <Compile Include="Ciudad.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ComboItem.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DetalleFactura.cs" />
+    <Compile Include="EntradaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaProductos.Designer.cs">
+      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaC.cs" />
+    <Compile Include="FacturaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaCliente.Designer.cs">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaProveedores.Designer.cs">
+      <DependentUpon>FacturaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lectorPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lectorPDF.Designer.cs">
+      <DependentUpon>lectorPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetodosBD.cs" />
+    <Compile Include="PanelProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelTransparente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Producto.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs" />
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarCategoria.Designer.cs">
+      <DependentUpon>RegistrarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarProducto.Designer.cs">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroProveedores.Designer.cs">
+      <DependentUpon>RegistroProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuarios.Designer.cs">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProveedores.Designer.cs">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaProductos.Designer.cs">
+      <DependentUpon>SalidaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="Validaciones.cs" />
+    <Compile Include="VentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal.Designer.cs">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipalNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipalNuevo.Designer.cs">
+      <DependentUpon>VentanaPrincipalNuevo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaProductos.resx">
+      <DependentUpon>EntradaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaCliente.resx">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaProveedores.resx">
+      <DependentUpon>FacturaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lectorPDF.resx">
+      <DependentUpon>lectorPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarCategoria.resx">
+      <DependentUpon>RegistrarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarProducto.resx">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroProveedores.resx">
+      <DependentUpon>RegistroProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroUsuarios.resx">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.resx">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaProductos.resx">
+      <DependentUpon>SalidaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipalNuevo.resx">
+      <DependentUpon>VentanaPrincipalNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\LoginFinal.jpg" />
+    <Content Include="Imagenes\LoginFinal3.jpg" />
+    <Content Include="Imagenes\LoginFinal4.jpg" />
+    <Content Include="Imagenes\RegistroUsuarios.jpg" />
+    <Content Include="Imagenes\RegistroUsuariosPlatinlla.jpg" />
+    <None Include="Resources\updown.png" />
+    <None Include="Resources\userMenu.png" />
+    <None Include="Resources\Sales-report-icon.png" />
+    <None Include="Resources\Remove-item-icon.png" />
+    <None Include="Resources\shop-cart-add-icon.png" />
+    <None Include="Resources\reportClie.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\UserFinal3.png" />
+    <None Include="Resources\retroceder1.png" />
+    <None Include="Resources\retroceder.png" />
+    <None Include="Resources\subir.png" />
+    <None Include="Resources\nutril-crop-u3908.png" />
+    <None Include="Resources\User-Files-icon.png" />
+    <None Include="Resources\User-Administrator-Blue-icon.png" />
+    <None Include="Resources\pass.png" />
+    <None Include="Resources\UserIcon1.png" />
+    <None Include="Resources\candado.png" />
+    <None Include="Resources\canda.png" />
+    <None Include="Resources\candadoFinal.png" />
+    <None Include="Resources\blue-cross-icon.png" />
+    <None Include="Resources\camara.png" />
+    <None Include="Resources\avanzar.png" />
+    <None Include="Resources\avanzar1.png" />
+    <None Include="Resources\candado1.png" />
+    <None Include="Resources\arrow2.png" />
+    <None Include="Resources\arrow3.png" />
+    <None Include="Resources\canasta.png" />
+    <None Include="Resources\client.png" />
+    <None Include="Resources\client64px.png" />
+    <None Include="Resources\building-icon.png" />
+    <None Include="Resources\chicken.png" />
+    <None Include="Resources\Document-Copy-icon.png" />
+    <None Include="Resources\chicken1.png" />
+    <None Include="Resources\buing.png" />
+    <None Include="Resources\Cart-icon.png" />
+    <None Include="Resources\Actions-contact-new-icon.png" />
+    <None Include="Resources\add-item-icon.png" />
+    <None Include="Resources\addP.png" />
+    <None Include="Resources\Distributor-report-icon.png" />
+    <None Include="Resources\abajo.png" />
+    <None Include="Resources\arriba.png" />
+    <None Include="Resources\camera2.jpg" />
+    <None Include="Resources\cameraFinal.jpg" />
+    <None Include="Resources\camarita.jpg" />
+    <None Include="Resources\Camera-icon2.png" />
+    <Content Include="Resources\door-open-icon.png" />
+    <None Include="Resources\flecha_animada.gif" />
+    <None Include="Resources\flecha_decoracion.gif" />
+    <None Include="Resources\flechaFinal.gif" />
+    <None Include="Resources\flechaFinal1.gif" />
+    <None Include="Resources\Flecha2.gif" />
+    <None Include="Resources\FinalFlecha3.gif" />
+    <None Include="Resources\group-add-icon.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\exit2.png" />
+    <None Include="Resources\encabezado.jpg" />
+    <None Include="Resources\enca.jpg" />
+    <None Include="Resources\enca2.jpg" />
+    <None Include="Resources\FacturaP.png" />
+    <None Include="Resources\Groups-Meeting-Dark-icon.png" />
+    <None Include="Resources\exitSesion.png" />
+    <None Include="Resources\Help-icon.png" />
+    <Content Include="Resources\LoginFinal2.jpg" />
+    <None Include="Resources\userIcon2.png" />
+    <None Include="Resources\UserIcon.png" />
+    <None Include="Resources\Folders-OS-User-No-Frame-Metro-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
