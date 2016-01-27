@@ -164,6 +164,35 @@ namespace ProyectoProgV
 
         }
 
+        public static string buscarContra(string codigo)
+        {
+
+            string contra ="";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select contra_empleado from usuario where cod_empleado like '%{0}'", codigo), con);
+                //     comando.Parameters.AddWithValue("@cedula", cedula);  // para evitar el sql injection
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    contra = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return contra;
+            }
+
+
+
+
+        }
+
+
+       
+
 
         public static bool buscarEstado(string codigo)
         {
@@ -656,6 +685,46 @@ namespace ProyectoProgV
         }
 
 
+
+        public static List<Usuarios> cargarPerfiles(string codigo)
+        {
+            string apellido;
+            string nombre;
+            string cedula;
+            string direccion;
+            string telefono;
+            string email;
+           
+            List<Usuarios> lista = new List<Usuarios>();
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select ced_empleado, nom_empleado, ape_empleado, dir_empleado, telf_empleado, email_empleado  from usuario where cod_empleado like = '" + codigo +"'", conexion);
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    cedula = reader.GetString(0);
+
+                    nombre = reader.GetString(1);
+                    apellido = reader.GetString(2);
+                    direccion = reader.GetString(3);
+                    telefono = reader.GetString(4);
+                    email = reader.GetString(5);
+
+
+                  
+
+                    Usuarios pro = new Usuarios("",cedula, nombre, apellido, direccion, telefono, email, "", "", "", "", "", false);
+                        lista.Add(pro);
+                    
+
+                }
+                conexion.Close();
+                return lista;
+
+            }
+        }
+
+
         public static List<FacturaC> cargarFacturaC(string numFact)
         {
              string numF;
@@ -884,6 +953,21 @@ namespace ProyectoProgV
             return dt;
         }
 
+        public static DataTable cargarControlPagos()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select num_factp,cod_proveedor, fecha_entrega, cantidad, total from controlPagos", conexion);
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                da.Fill(dt);
+                conexion.Close();
+            }
+
+            return dt;
+        }
+
         public static DataTable cargarProductos3()
         {
             DataTable dt = new DataTable();
@@ -1043,6 +1127,20 @@ namespace ProyectoProgV
             }
             return retorno;
         }
+
+
+        public static int ActualizarUsuario2(string codigo, string urlFoto, string user, string contra)
+        {
+            int retorno = 0; // en el caso de que no se borre el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("update usuario set urlfoto_empleado='" + urlFoto + "', user_empleado='" + user + "', contra_empleado='" + contra + "' where cod_empleado like '" + codigo + "'", con);
+                retorno = comando.ExecuteNonQuery();
+                con.Close();
+            }
+            return retorno;
+        }
+
 
         public static int ActualizarCliente(string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email,  string ciudad, bool estado)
         {

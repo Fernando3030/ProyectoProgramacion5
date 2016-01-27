@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidad\ControlPagos.cs" />
     <Compile Include="Entidad\Movimiento.cs" />
     <Compile Include="Presentacion\BuscarCliente.cs">
       <SubType>Form</SubType>

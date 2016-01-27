@@ -382,6 +382,8 @@ namespace ProyectoProgV
 
                        
                         pictureTelefono.Image = null;
+                        contador = 0;
+
                         
 
 
@@ -392,8 +394,23 @@ namespace ProyectoProgV
                 }
                 else
                 {
+                    bool estado2 = false;
+                    if (contador == 0)
+                    {
+                        estado2 = MetodosBD.buscarEstadoCliente(txtCodigo.Text);
+
+                    }
+                    else
+                    {
+                        if (contador == 1)
+                        {
+                            estado2 = estado;
+                            contador = 0;
+                        }
+
+                    }
                     banderaModificar = false;
-                    int resultado = MetodosBD.ActualizarCliente(codigo, cedula, nombre, apellido, direccion, telefono, email,  ciudad, estado);
+                    int resultado = MetodosBD.ActualizarCliente(codigo, cedula, nombre, apellido, direccion, telefono, email,  ciudad, estado2);
                     if (resultado > 0)
                     {
                         txtCodigo.Text = "";
@@ -636,21 +653,10 @@ namespace ProyectoProgV
 
         private void chEstado_Click(object sender, EventArgs e)
         {
-            if (contador == 0)
-            {
-                chEstado.Text = "Inactivo";
-                chEstado.ForeColor = Color.Red;
-                contador = contador + 1;
-                estado = false;
 
-            }
-            else
-            {
-                chEstado.Text = "Activo";
-                chEstado.ForeColor = Color.Green;
-                contador = 0;
-                estado = true;
-            }
+            contador = 1;
+            Console.WriteLine("el contador es " + contador);
+          
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -696,6 +702,27 @@ namespace ProyectoProgV
             factCliente.txtDireccion.Text = dir;
             factCliente.txtTelefono.Text = telf;
             factCliente.Show();
+        }
+
+        private void chEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chEstado.Checked)
+            {
+                chEstado.Text = "Inactivo";
+                chEstado.ForeColor = Color.Red;
+                contador = contador + 1;
+                estado = false;
+
+            }
+            else
+            {
+
+                chEstado.Text = "Activo";
+                chEstado.ForeColor = Color.Green;
+                contador = 0;
+                estado = true;
+
+            }
         }
     }
 }

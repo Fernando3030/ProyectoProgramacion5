@@ -273,6 +273,7 @@
             this.chEstado.TabIndex = 29;
             this.chEstado.Text = "Activo";
             this.chEstado.UseVisualStyleBackColor = true;
+            this.chEstado.CheckedChanged += new System.EventHandler(this.chEstado_CheckedChanged);
             this.chEstado.Click += new System.EventHandler(this.chEstado_Click);
             // 
             // label4

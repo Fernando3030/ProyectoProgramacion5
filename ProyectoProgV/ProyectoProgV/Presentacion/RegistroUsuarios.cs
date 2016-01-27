@@ -19,6 +19,7 @@ namespace ProyectoProgV
         bool banderaModificar = false;
         int contador = 0;
         bool estado = true;
+   
         DialogResult resultado;
 
         string Direccion="";
@@ -37,7 +38,7 @@ namespace ProyectoProgV
             dataGridView.Rows.Clear();
            
             
-           dataGridView.DataSource = MetodosBD.cargarUsuarios2();
+            dataGridView.DataSource = MetodosBD.cargarUsuarios2();
          
             dataGridView.ClearSelection();
             txtCodigo.Enabled = false;
@@ -423,6 +424,7 @@ namespace ProyectoProgV
                          txtPass.Text = "";
                          btnCargarFoto.Enabled = false;
                          pictureNombre.Image = null;
+                         estado = true;
 
                          pictureApellido.Image = null;
                          pictureEstado.Image = null;
@@ -447,6 +449,7 @@ namespace ProyectoProgV
 
                          pictureTelefono.Image = null;
                          pictureBox1.Image = null;
+                         contador = 0;
 
 
                      }
@@ -456,8 +459,23 @@ namespace ProyectoProgV
                  }
                  else
                  {
+                     bool estado2 = false;
                      banderaModificar = false;
-                     int resultado = MetodosBD.ActualizarUsuario(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado);
+                     if(contador== 0)
+                     {
+                         estado2 = MetodosBD.buscarEstado(txtCodigo.Text);
+
+                     }
+                     else
+                     {
+                         if(contador==1)
+                         {
+                             estado2 = estado;
+                             contador = 0;
+                         }
+                       
+                     }
+                     int resultado = MetodosBD.ActualizarUsuario(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado2);
                      if (resultado > 0)
                      {
                          txtCodigo.Text = "";
@@ -466,6 +484,7 @@ namespace ProyectoProgV
                          txtCedula.Text = "";
                          txtDireccion.Text = "";
                          txtEmail.Text = "";
+                        
                          deshabilitar();
                          chEstado.Enabled = false;
 
@@ -499,6 +518,7 @@ namespace ProyectoProgV
                          txtTelefono.Text = "";
                          txtUsuario.Text = "";
                          txtPass.Text = "";
+                         estado = true;
                          MessageBox.Show("Dato Actualizado Correctamente", "Mensaje de Confirmación");
                          dataGridView.DataSource = MetodosBD.cargarUsuarios2();
                      }
@@ -805,22 +825,31 @@ namespace ProyectoProgV
 
         private void chEstado_Click(object sender, EventArgs e)
         {
-            
-            if(contador==0)
-            {
-                chEstado.Text = "Inactivo";
-                chEstado.ForeColor = Color.Red;
-                contador = contador + 1;
-                estado = false;
-
-            }
-            else
+            /*
+            if(chEstado.Text.Equals("Activo"))
             {
                 chEstado.Text = "Activo";
                 chEstado.ForeColor = Color.Green;
                 contador = 0;
                 estado = true;
             }
+            else
+            {
+                if (chEstado.Text.Equals("Inactivo"))
+                {
+                    chEstado.Text = "Inactivo";
+                    chEstado.ForeColor = Color.Red;
+                    contador = contador + 1;
+                    estado = false;
+                }
+            }
+             * */
+
+         
+            contador= 1;
+            Console.WriteLine("el contador es " + contador );
+       
+                
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -842,6 +871,27 @@ namespace ProyectoProgV
             }
             else
             {
+                
+            }
+        }
+
+        private void chEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chEstado.Checked)
+            {
+                chEstado.Text = "Inactivo";
+                chEstado.ForeColor = Color.Red;
+                contador = contador + 1;
+                estado = false;
+               
+            }
+            else
+            {
+
+                chEstado.Text = "Activo";
+                chEstado.ForeColor = Color.Green;
+                contador = 0;
+                estado = true;
                 
             }
         }

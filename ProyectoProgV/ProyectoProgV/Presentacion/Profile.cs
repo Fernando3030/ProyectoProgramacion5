@@ -29,6 +29,8 @@ namespace ProyectoProgV
         string Direccion="";
         string ciudad="";
         bool estado=false;
+        
+
                    
                    
 
@@ -50,11 +52,12 @@ namespace ProyectoProgV
             {
                 /// Si esto se cumple, capturamos la propiedad File Name y la guardamos en el control
                 //  this.textBox1.Text = BuscarImagen.FileName;
-                Direccion = pictureBox1.ImageLocation;
+
                 this.pictureBox1.ImageLocation = BuscarImagen.FileName;
+                Direccion = pictureBox1.ImageLocation;
                 //Pueden usar tambien esta forma para cargar la Imagen solo activenla y comenten la linea donde se cargaba anteriormente 
                 //this.pictureBox1.ImageLocation = textBox1.Text;
-                Console.Write("hola");
+                Console.Write("Direccion 1 " + Direccion);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 
             }   
@@ -117,9 +120,9 @@ namespace ProyectoProgV
                 /// Si esto se cumple, capturamos la propiedad File Name y la guardamos en el control
                 //  this.textBox1.Text = BuscarImagen.FileName;
 
-                Direccion = pictureBox1.ImageLocation;
+                Direccion = BuscarImagen.FileName;
 
-                this.pictureBox1.ImageLocation = BuscarImagen.FileName;
+                this.pictureBox1.ImageLocation = Direccion;
                 //Pueden usar tambien esta forma para cargar la Imagen solo activenla y comenten la linea donde se cargaba anteriormente 
                 //this.pictureBox1.ImageLocation = textBox1.Text;
                 Console.Write("hola");
@@ -146,7 +149,7 @@ namespace ProyectoProgV
                     pass = reader.GetString(8);
                    tipoUser = reader.GetString(9);
                     Direccion = reader.GetString(10);
-
+                    
 
 
                     ciudad = reader.GetString(11);
@@ -167,8 +170,66 @@ namespace ProyectoProgV
 
         private void Profile_Load(object sender, EventArgs e)
         {
+
             cargarDatos();
+           
             lblUser.Text = user;
+            lblNombre.Text = nombre;
+            lblApellido.Text = apellido;
+            lblCedula.Text = cedula;
+            lblDireccion.Text = direccion;
+            lblTelefono.Text = telefono;
+            lblEmail.Text = email;
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            VentanaPrincipalNuevo ventana = new VentanaPrincipalNuevo();
+            ventana.Show();
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            string usuario=txtUsuario.Text;
+            string contraA=txtContraAntigua.Text;
+            string contraN=txtContraNueva.Text;
+
+            if(usuario.Equals("") || contraA.Equals("") || contraN.Equals("") )
+            {
+                MessageBox.Show("Algun campo está vacio");
+
+
+            }
+            else
+            {
+                string contraVieja = MetodosBD.buscarContra(codigo);
+                if(contraA.Equals(contraVieja))
+                {
+                    // se guarda en la BD
+                    Login.ROL = usuario;
+                    Console.WriteLine(Direccion);
+                    int resultado = MetodosBD.ActualizarUsuario2(codigo, Direccion, usuario, contraN);
+                    if(resultado >0)
+                    {
+                        MessageBox.Show("Datos actualizados correctamente");
+                        txtUsuario.Text = "";
+                        txtContraAntigua.Text = "";
+                        txtContraNueva.Text = "";
+                        lblUser.Text = usuario;
+
+
+                    }
+                }
+                else
+                {
+                    txtContraAntigua.Text = "";
+                    txtContraAntigua.Focus();
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
+            }
         }
 
        
