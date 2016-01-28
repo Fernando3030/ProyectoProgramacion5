@@ -8,9 +8,9 @@ namespace ProyectoProgV.Entidad
 {
     class ControlPagos
     {
-        int numFact;
+        string numFact;
 
-        public int NumFact
+        public string NumFact
         {
             get { return numFact; }
             set { numFact = value; }
@@ -52,7 +52,7 @@ namespace ProyectoProgV.Entidad
         }
 
 
-        public ControlPagos(int numF, string codigoP, string fecha, int cantidad, decimal total, string url)
+        public ControlPagos(string numF, string codigoP, string fecha, int cantidad, decimal total, string url)
         {
             this.numFact = numF;
             this.codigoProve = codigoP;

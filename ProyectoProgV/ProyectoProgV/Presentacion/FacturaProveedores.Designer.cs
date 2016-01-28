@@ -37,7 +37,6 @@
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
-            this.panelTransparente1 = new ProyectoProgV.PanelTransparente();
             this.btnCargarFoto = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,6 +45,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureTotal = new System.Windows.Forms.PictureBox();
             this.pictureCantidad = new System.Windows.Forms.PictureBox();
             this.pictureFecha = new System.Windows.Forms.PictureBox();
@@ -95,13 +95,14 @@
             this.btnGuardar2 = new MetroFramework.Controls.MetroButton();
             this.btnNuevo2 = new MetroFramework.Controls.MetroButton();
             this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelTransparente1 = new ProyectoProgV.PanelTransparente();
             this.metroTabControl1.SuspendLayout();
             this.tab1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).BeginInit();
@@ -113,7 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // metroToolTip1
@@ -154,18 +154,9 @@
             this.tab1.TabIndex = 2;
             this.tab1.Text = "Control de Pagos";
             // 
-            // panelTransparente1
-            // 
-            this.panelTransparente1.AllowDrop = true;
-            this.panelTransparente1.Location = new System.Drawing.Point(365, 14);
-            this.panelTransparente1.Name = "panelTransparente1";
-            this.panelTransparente1.Size = new System.Drawing.Size(254, 293);
-            this.panelTransparente1.TabIndex = 9;
-            this.panelTransparente1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragDrop);
-            this.panelTransparente1.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragOver);
-            // 
             // btnCargarFoto
             // 
+            this.btnCargarFoto.Enabled = false;
             this.btnCargarFoto.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnCargarFoto.Highlight = true;
             this.btnCargarFoto.Location = new System.Drawing.Point(365, 310);
@@ -199,6 +190,8 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -206,7 +199,7 @@
             this.dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -215,7 +208,7 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -224,8 +217,9 @@
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView.Location = new System.Drawing.Point(17, 40);
+            this.dataGridView.Location = new System.Drawing.Point(29, 36);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.SaddleBrown;
@@ -237,15 +231,16 @@
             this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(570, 177);
+            this.dataGridView.Size = new System.Drawing.Size(544, 177);
             this.dataGridView.TabIndex = 21;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // txtBusqueda1
             // 
             this.txtBusqueda1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtBusqueda1.ForeColor = System.Drawing.Color.Black;
             this.txtBusqueda1.Lines = new string[0];
-            this.txtBusqueda1.Location = new System.Drawing.Point(296, 8);
+            this.txtBusqueda1.Location = new System.Drawing.Point(360, 4);
             this.txtBusqueda1.MaxLength = 32767;
             this.txtBusqueda1.Name = "txtBusqueda1";
             this.txtBusqueda1.PasswordChar = '\0';
@@ -258,13 +253,14 @@
             this.txtBusqueda1.UseCustomForeColor = true;
             this.txtBusqueda1.UseSelectable = true;
             this.txtBusqueda1.UseStyleColors = true;
+            this.txtBusqueda1.TextChanged += new System.EventHandler(this.txtBusqueda1_TextChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(114, 8);
+            this.label12.Location = new System.Drawing.Point(187, 8);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(167, 20);
             this.label12.TabIndex = 20;
@@ -304,6 +300,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 277);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(337, -50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureTotal
             // 
@@ -370,7 +374,7 @@
             // 
             this.dateEntrega.Enabled = false;
             this.dateEntrega.Location = new System.Drawing.Point(14, 129);
-            this.dateEntrega.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateEntrega.MinimumSize = new System.Drawing.Size(4, 29);
             this.dateEntrega.Name = "dateEntrega";
             this.dateEntrega.Size = new System.Drawing.Size(164, 29);
             this.dateEntrega.Style = MetroFramework.MetroColorStyle.Brown;
@@ -523,9 +527,11 @@
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseSelectable = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.Enabled = false;
             this.btnModificar.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnModificar.Highlight = true;
             this.btnModificar.Location = new System.Drawing.Point(11, 119);
@@ -535,6 +541,7 @@
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseSelectable = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -968,13 +975,15 @@
             this.label23.TabIndex = 7;
             this.label23.Text = "Opciones";
             // 
-            // pictureBox2
+            // panelTransparente1
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(337, -50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
+            this.panelTransparente1.AllowDrop = true;
+            this.panelTransparente1.Location = new System.Drawing.Point(365, 14);
+            this.panelTransparente1.Name = "panelTransparente1";
+            this.panelTransparente1.Size = new System.Drawing.Size(254, 293);
+            this.panelTransparente1.TabIndex = 9;
+            this.panelTransparente1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragDrop);
+            this.panelTransparente1.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragOver);
             // 
             // FacturaProveedores
             // 
@@ -997,6 +1006,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).EndInit();
@@ -1011,7 +1021,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

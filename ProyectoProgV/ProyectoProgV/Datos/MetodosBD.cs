@@ -1116,6 +1116,20 @@ namespace ProyectoProgV
             return retorno;
         }
 
+
+        public static int InsertarControl(ControlPagos cat)
+        {
+            int retorno = 0; // en el caso de que no se inserter el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Insert into controlPagos(num_factp, cod_proveedor, fecha_entrega, cantidad, total, url_factura) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", cat.NumFact, cat.CodigoProve, cat.Fecha, cat.Cantidad, cat.Total, cat.UrlFoto), con);
+                retorno = comando.ExecuteNonQuery();
+
+                con.Close();
+            }
+            return retorno;
+        }
+
         public static int ActualizarUsuario(string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipo, string url , string ciudad, bool estado)
         {
             int retorno = 0; // en el caso de que no se borre el registro retornara cero
@@ -1172,6 +1186,19 @@ namespace ProyectoProgV
             using (SqlConnection con = Conexion.obtenerConexion())
             {
                 SqlCommand comando = new SqlCommand("update categoria set cod_categoria='" + codigo + "',  categoria='" + categoria + "', estado_categoria='" + estado + "' where cod_categoria like '" + codigo + "'", con);
+                retorno = comando.ExecuteNonQuery();
+                con.Close();
+            }
+            return retorno;
+        }
+
+
+        public static int ActualizarControlP(string numF, string codP, string fecha, int cantidad, decimal total, string url)
+        {
+            int retorno = 0; // en el caso de que no se borre el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("update controlPagos set cod_proveedor='" + codP + "', fecha_entrega='" + fecha + "', cantidad='" + cantidad + "', total='" + total + "', url_factura='" + url + "' where num_factp like '" + numF + "'", con);
                 retorno = comando.ExecuteNonQuery();
                 con.Close();
             }
