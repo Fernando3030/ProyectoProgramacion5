@@ -534,6 +534,29 @@ namespace ProyectoProgV
 
         }
 
+        public static string buscarNumFactP(string codigo)
+        {
+
+            string numF = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select num_factp from controlPagos where num_factp like '%{0}'", codigo), con);
+
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    numF = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return numF;
+            }
+
+        }
+
         public static double buscarPrecio(string codigo)
         {
             decimal precio;
@@ -677,6 +700,46 @@ namespace ProyectoProgV
                         lista.Add(pro);
                     }
                     
+                }
+                conexion.Close();
+                return lista;
+
+            }
+        }
+
+
+        public static List<ControlPagos> cargarControlP()
+        {
+            string numFact;
+            string codigoProve;
+            string fecha;
+            int cantidad;
+            decimal total;
+            string url;
+
+
+          
+            List<ControlPagos> lista = new List<ControlPagos>();
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select * from controlPagos", conexion);
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    numFact = reader.GetString(0);
+
+                    codigoProve = reader.GetString(1);
+                    fecha = reader.GetString(2);
+                    cantidad = reader.GetInt32(3);
+                    total = reader.GetDecimal(4);
+                    url = reader.GetString(5);
+
+
+
+                    ControlPagos pro = new ControlPagos(numFact, codigoProve, fecha, cantidad, total, url);
+                        lista.Add(pro);
+                    
+
                 }
                 conexion.Close();
                 return lista;
@@ -968,6 +1031,21 @@ namespace ProyectoProgV
             return dt;
         }
 
+        public static DataTable cargarPagosFactura()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select num_factp,fecha_pago, nro_cuenta_banco, monto_pagar, banco from pagoFacturasCompra", conexion);
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                da.Fill(dt);
+                conexion.Close();
+            }
+
+            return dt;
+        }
+
         public static DataTable cargarProductos3()
         {
             DataTable dt = new DataTable();
@@ -1130,6 +1208,20 @@ namespace ProyectoProgV
             return retorno;
         }
 
+
+        public static int InsertarPagos(PagosFactura cat)
+        {
+            int retorno = 0; // en el caso de que no se inserter el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Insert into pagoFacturasCompra(cod_egresoc, num_factp, fecha_pago, nro_cuenta_banco, monto_pagar, banco) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", cat.Codigo, cat.NumFactP, cat.Fecha, cat.NroCuenta, cat.Monto, cat.Banco), con);
+                retorno = comando.ExecuteNonQuery();
+
+                con.Close();
+            }
+            return retorno;
+        }
+
         public static int ActualizarUsuario(string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipo, string url , string ciudad, bool estado)
         {
             int retorno = 0; // en el caso de que no se borre el registro retornara cero
@@ -1213,6 +1305,19 @@ namespace ProyectoProgV
             using (SqlConnection con = Conexion.obtenerConexion())
             {
                 SqlCommand comando = new SqlCommand("update producto set cod_producto='" + codigo + "',  cod_categoria='" + categoria + "', cod_proveedor='" + proveedor + "', producto='" + producto + "', fecha_vencimiento='" + fecha + "', stock='" + stock + "', precio_compra='" + precioC + "', precio_venta='" + precioV + "', estado_producto='" + estado+ "' where cod_producto like '" + codigo + "'", con);
+                retorno = comando.ExecuteNonQuery();
+                con.Close();
+            }
+            return retorno;
+        }
+
+
+        public static int ActualizarPagos(string cod, string numF, string fecha, int nroC, decimal monto, string banco)
+        {
+            int retorno = 0; // en el caso de que no se borre el registro retornara cero
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("update pagoFacturasCompra set num_factp='" + numF + "',  fecha_pago='" + fecha + "', nro_cuenta_banco='" + nroC + "', monto_pagar='" + monto + "', banco='" + banco + "' where cod_egresoc like '" + cod + "'", con);
                 retorno = comando.ExecuteNonQuery();
                 con.Close();
             }

@@ -70,11 +70,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tab2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.dataGridView2 = new MetroFramework.Controls.MetroGrid();
             this.txtBusqueda2 = new MetroFramework.Controls.MetroTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBanco = new System.Windows.Forms.PictureBox();
+            this.pictureMonto = new System.Windows.Forms.PictureBox();
+            this.pictureFechaP = new System.Windows.Forms.PictureBox();
+            this.pictureNroCuenta = new System.Windows.Forms.PictureBox();
+            this.pictureNumF = new System.Windows.Forms.PictureBox();
+            this.pictureCodigo = new System.Windows.Forms.PictureBox();
             this.cbNumFactP = new MetroFramework.Controls.MetroComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -91,7 +97,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnSalir2 = new MetroFramework.Controls.MetroButton();
-            this.btnBuscar2 = new MetroFramework.Controls.MetroButton();
+            this.btnModificar2 = new MetroFramework.Controls.MetroButton();
             this.btnGuardar2 = new MetroFramework.Controls.MetroButton();
             this.btnNuevo2 = new MetroFramework.Controls.MetroButton();
             this.label23 = new System.Windows.Forms.Label();
@@ -111,8 +117,14 @@
             this.panel1.SuspendLayout();
             this.tab2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBanco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMonto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFechaP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNroCuenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNumF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCodigo)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +140,7 @@
             this.metroTabControl1.Controls.Add(this.tab2);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 85);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(642, 636);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
@@ -600,7 +612,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.metroGrid2);
+            this.panel4.Controls.Add(this.dataGridView2);
             this.panel4.Controls.Add(this.txtBusqueda2);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Location = new System.Drawing.Point(16, 316);
@@ -608,13 +620,15 @@
             this.panel4.Size = new System.Drawing.Size(589, 262);
             this.panel4.TabIndex = 12;
             // 
-            // metroGrid2
+            // dataGridView2
             // 
-            this.metroGrid2.AllowUserToResizeRows = false;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.LightGray;
-            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -622,8 +636,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,13 +645,14 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.metroGrid2.EnableHeadersVisualStyles = false;
-            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.Location = new System.Drawing.Point(16, 40);
-            this.metroGrid2.Name = "metroGrid2";
-            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView2.Location = new System.Drawing.Point(20, 40);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -645,11 +660,12 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(553, 217);
-            this.metroGrid2.TabIndex = 21;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(547, 217);
+            this.dataGridView2.TabIndex = 21;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // txtBusqueda2
             // 
@@ -669,6 +685,7 @@
             this.txtBusqueda2.UseCustomForeColor = true;
             this.txtBusqueda2.UseSelectable = true;
             this.txtBusqueda2.UseStyleColors = true;
+            this.txtBusqueda2.TextChanged += new System.EventHandler(this.txtBusqueda2_TextChanged);
             // 
             // label13
             // 
@@ -695,6 +712,12 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.pictureBanco);
+            this.panel5.Controls.Add(this.pictureMonto);
+            this.panel5.Controls.Add(this.pictureFechaP);
+            this.panel5.Controls.Add(this.pictureNroCuenta);
+            this.panel5.Controls.Add(this.pictureNumF);
+            this.panel5.Controls.Add(this.pictureCodigo);
             this.panel5.Controls.Add(this.cbNumFactP);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.label24);
@@ -713,8 +736,57 @@
             this.panel5.Size = new System.Drawing.Size(464, 230);
             this.panel5.TabIndex = 10;
             // 
+            // pictureBanco
+            // 
+            this.pictureBanco.Location = new System.Drawing.Point(424, 145);
+            this.pictureBanco.Name = "pictureBanco";
+            this.pictureBanco.Size = new System.Drawing.Size(32, 32);
+            this.pictureBanco.TabIndex = 28;
+            this.pictureBanco.TabStop = false;
+            // 
+            // pictureMonto
+            // 
+            this.pictureMonto.Location = new System.Drawing.Point(424, 88);
+            this.pictureMonto.Name = "pictureMonto";
+            this.pictureMonto.Size = new System.Drawing.Size(32, 32);
+            this.pictureMonto.TabIndex = 27;
+            this.pictureMonto.TabStop = false;
+            // 
+            // pictureFechaP
+            // 
+            this.pictureFechaP.Location = new System.Drawing.Point(424, 31);
+            this.pictureFechaP.Name = "pictureFechaP";
+            this.pictureFechaP.Size = new System.Drawing.Size(32, 32);
+            this.pictureFechaP.TabIndex = 26;
+            this.pictureFechaP.TabStop = false;
+            // 
+            // pictureNroCuenta
+            // 
+            this.pictureNroCuenta.Location = new System.Drawing.Point(184, 145);
+            this.pictureNroCuenta.Name = "pictureNroCuenta";
+            this.pictureNroCuenta.Size = new System.Drawing.Size(32, 32);
+            this.pictureNroCuenta.TabIndex = 25;
+            this.pictureNroCuenta.TabStop = false;
+            // 
+            // pictureNumF
+            // 
+            this.pictureNumF.Location = new System.Drawing.Point(184, 88);
+            this.pictureNumF.Name = "pictureNumF";
+            this.pictureNumF.Size = new System.Drawing.Size(32, 32);
+            this.pictureNumF.TabIndex = 24;
+            this.pictureNumF.TabStop = false;
+            // 
+            // pictureCodigo
+            // 
+            this.pictureCodigo.Location = new System.Drawing.Point(184, 28);
+            this.pictureCodigo.Name = "pictureCodigo";
+            this.pictureCodigo.Size = new System.Drawing.Size(32, 32);
+            this.pictureCodigo.TabIndex = 23;
+            this.pictureCodigo.TabStop = false;
+            // 
             // cbNumFactP
             // 
+            this.cbNumFactP.Enabled = false;
             this.cbNumFactP.FormattingEnabled = true;
             this.cbNumFactP.ItemHeight = 23;
             this.cbNumFactP.Location = new System.Drawing.Point(18, 91);
@@ -752,6 +824,7 @@
             // txtMontoPagar
             // 
             this.txtMontoPagar.BackColor = System.Drawing.Color.White;
+            this.txtMontoPagar.Enabled = false;
             this.txtMontoPagar.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtMontoPagar.ForeColor = System.Drawing.Color.Black;
             this.txtMontoPagar.Lines = new string[0];
@@ -782,10 +855,11 @@
             // 
             // datePago
             // 
+            this.datePago.Enabled = false;
             this.datePago.Location = new System.Drawing.Point(247, 34);
-            this.datePago.MinimumSize = new System.Drawing.Size(4, 29);
+            this.datePago.MinimumSize = new System.Drawing.Size(0, 29);
             this.datePago.Name = "datePago";
-            this.datePago.Size = new System.Drawing.Size(174, 29);
+            this.datePago.Size = new System.Drawing.Size(171, 29);
             this.datePago.Style = MetroFramework.MetroColorStyle.Brown;
             this.datePago.TabIndex = 15;
             // 
@@ -803,6 +877,7 @@
             // txtBanco
             // 
             this.txtBanco.BackColor = System.Drawing.Color.White;
+            this.txtBanco.Enabled = false;
             this.txtBanco.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtBanco.ForeColor = System.Drawing.Color.Black;
             this.txtBanco.Lines = new string[0];
@@ -813,7 +888,7 @@
             this.txtBanco.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBanco.SelectedText = "";
             this.txtBanco.Size = new System.Drawing.Size(160, 26);
-            this.txtBanco.Style = MetroFramework.MetroColorStyle.Orange;
+            this.txtBanco.Style = MetroFramework.MetroColorStyle.Brown;
             this.txtBanco.TabIndex = 12;
             this.txtBanco.UseCustomBackColor = true;
             this.txtBanco.UseCustomForeColor = true;
@@ -834,6 +909,7 @@
             // txtNumCuenta
             // 
             this.txtNumCuenta.BackColor = System.Drawing.Color.White;
+            this.txtNumCuenta.Enabled = false;
             this.txtNumCuenta.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtNumCuenta.ForeColor = System.Drawing.Color.Black;
             this.txtNumCuenta.Lines = new string[0];
@@ -850,6 +926,7 @@
             this.txtNumCuenta.UseCustomForeColor = true;
             this.txtNumCuenta.UseSelectable = true;
             this.txtNumCuenta.UseStyleColors = true;
+            this.txtNumCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumCuenta_KeyPress);
             // 
             // label20
             // 
@@ -865,6 +942,7 @@
             // txtCodCheque
             // 
             this.txtCodCheque.BackColor = System.Drawing.Color.White;
+            this.txtCodCheque.Enabled = false;
             this.txtCodCheque.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCodCheque.ForeColor = System.Drawing.Color.Black;
             this.txtCodCheque.Lines = new string[0];
@@ -908,7 +986,7 @@
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.btnSalir2);
-            this.panel6.Controls.Add(this.btnBuscar2);
+            this.panel6.Controls.Add(this.btnModificar2);
             this.panel6.Controls.Add(this.btnGuardar2);
             this.panel6.Controls.Add(this.btnNuevo2);
             this.panel6.Location = new System.Drawing.Point(17, 51);
@@ -927,21 +1005,25 @@
             this.btnSalir2.TabIndex = 3;
             this.btnSalir2.Text = "Salir";
             this.btnSalir2.UseSelectable = true;
+            this.btnSalir2.Click += new System.EventHandler(this.btnSalir2_Click);
             // 
-            // btnBuscar2
+            // btnModificar2
             // 
-            this.btnBuscar2.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnBuscar2.Highlight = true;
-            this.btnBuscar2.Location = new System.Drawing.Point(11, 119);
-            this.btnBuscar2.Name = "btnBuscar2";
-            this.btnBuscar2.Size = new System.Drawing.Size(90, 40);
-            this.btnBuscar2.Style = MetroFramework.MetroColorStyle.Brown;
-            this.btnBuscar2.TabIndex = 2;
-            this.btnBuscar2.Text = "Buscar";
-            this.btnBuscar2.UseSelectable = true;
+            this.btnModificar2.Enabled = false;
+            this.btnModificar2.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnModificar2.Highlight = true;
+            this.btnModificar2.Location = new System.Drawing.Point(11, 119);
+            this.btnModificar2.Name = "btnModificar2";
+            this.btnModificar2.Size = new System.Drawing.Size(90, 40);
+            this.btnModificar2.Style = MetroFramework.MetroColorStyle.Brown;
+            this.btnModificar2.TabIndex = 2;
+            this.btnModificar2.Text = "Modificar";
+            this.btnModificar2.UseSelectable = true;
+            this.btnModificar2.Click += new System.EventHandler(this.btnModificar2_Click);
             // 
             // btnGuardar2
             // 
+            this.btnGuardar2.Enabled = false;
             this.btnGuardar2.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnGuardar2.Highlight = true;
             this.btnGuardar2.Location = new System.Drawing.Point(11, 65);
@@ -951,6 +1033,7 @@
             this.btnGuardar2.TabIndex = 1;
             this.btnGuardar2.Text = "Guardar";
             this.btnGuardar2.UseSelectable = true;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
             // 
             // btnNuevo2
             // 
@@ -963,6 +1046,7 @@
             this.btnNuevo2.TabIndex = 0;
             this.btnNuevo2.Text = "Nuevo";
             this.btnNuevo2.UseSelectable = true;
+            this.btnNuevo2.Click += new System.EventHandler(this.btnNuevo2_Click);
             // 
             // label23
             // 
@@ -1017,9 +1101,15 @@
             this.tab2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBanco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMonto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFechaP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNroCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNumF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCodigo)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1054,7 +1144,7 @@
         private System.Windows.Forms.Label label7;
         private MetroFramework.Controls.MetroGrid dataGridView;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroGrid metroGrid2;
+        private MetroFramework.Controls.MetroGrid dataGridView2;
         private MetroFramework.Controls.MetroTextBox txtBusqueda2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -1072,7 +1162,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel6;
         private MetroFramework.Controls.MetroButton btnSalir2;
-        private MetroFramework.Controls.MetroButton btnBuscar2;
+        private MetroFramework.Controls.MetroButton btnModificar2;
         private MetroFramework.Controls.MetroButton btnGuardar2;
         private MetroFramework.Controls.MetroButton btnNuevo2;
         private System.Windows.Forms.Label label23;
@@ -1089,5 +1179,11 @@
         private System.Windows.Forms.PictureBox pictureProveedor;
         private System.Windows.Forms.PictureBox pictureNumFact;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBanco;
+        private System.Windows.Forms.PictureBox pictureMonto;
+        private System.Windows.Forms.PictureBox pictureFechaP;
+        private System.Windows.Forms.PictureBox pictureNroCuenta;
+        private System.Windows.Forms.PictureBox pictureNumF;
+        private System.Windows.Forms.PictureBox pictureCodigo;
     }
 }

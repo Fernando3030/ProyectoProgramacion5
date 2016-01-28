@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Entidad\ControlPagos.cs" />
     <Compile Include="Entidad\Movimiento.cs" />
+    <Compile Include="Entidad\PagosFactura.cs" />
     <Compile Include="Presentacion\BuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
