@@ -563,6 +563,16 @@ namespace ProyectoProgV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Profacti_System {
+            get {
+                object obj = ResourceManager.GetObject("Logo Profacti System", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nutril_crop_u3908 {
             get {
                 object obj = ResourceManager.GetObject("nutril-crop-u3908", resourceCulture);
@@ -576,6 +586,26 @@ namespace ProyectoProgV.Properties {
         internal static System.Drawing.Bitmap pass {
             get {
                 object obj = ResourceManager.GetObject("pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProfactiFinal {
+            get {
+                object obj = ResourceManager.GetObject("ProfactiFinal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProfactiFinal2 {
+            get {
+                object obj = ResourceManager.GetObject("ProfactiFinal2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -97,9 +97,9 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControl1.ForeColor = System.Drawing.Color.SaddleBrown;
@@ -115,7 +115,7 @@
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.ribbonControl1.Size = new System.Drawing.Size(737, 164);
+            this.ribbonControl1.Size = new System.Drawing.Size(741, 164);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -146,7 +146,7 @@
             this.ribbonPanel1.Location = new System.Drawing.Point(0, 61);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(737, 100);
+            this.ribbonPanel1.Size = new System.Drawing.Size(741, 100);
             // 
             // 
             // 
@@ -260,7 +260,7 @@
             this.ribbonPanel2.Location = new System.Drawing.Point(0, 61);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(737, 100);
+            this.ribbonPanel2.Size = new System.Drawing.Size(741, 100);
             // 
             // 
             // 
@@ -349,6 +349,7 @@
             this.btnReportFactClient.Image = global::ProyectoProgV.Properties.Resources.Distributor_report_icon;
             this.btnReportFactClient.Name = "btnReportFactClient";
             this.btnReportFactClient.SubItemsExpandWidth = 14;
+            this.btnReportFactClient.Click += new System.EventHandler(this.btnReportFactClient_Click);
             // 
             // ribbonBar5
             // 
@@ -386,6 +387,7 @@
             this.btnReportUsuarios.Image = global::ProyectoProgV.Properties.Resources.Groups_Meeting_Dark_icon;
             this.btnReportUsuarios.Name = "btnReportUsuarios";
             this.btnReportUsuarios.SubItemsExpandWidth = 14;
+            this.btnReportUsuarios.Click += new System.EventHandler(this.btnReportUsuarios_Click);
             // 
             // ribbonBar1
             // 
@@ -423,6 +425,7 @@
             this.btnReportCliente.Image = global::ProyectoProgV.Properties.Resources.reportClie;
             this.btnReportCliente.Name = "btnReportCliente";
             this.btnReportCliente.SubItemsExpandWidth = 14;
+            this.btnReportCliente.Click += new System.EventHandler(this.btnReportCliente_Click);
             // 
             // mItemProvee
             // 
@@ -471,7 +474,7 @@
             this.ribbonPanel3.Location = new System.Drawing.Point(0, 61);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(737, 100);
+            this.ribbonPanel3.Size = new System.Drawing.Size(741, 100);
             // 
             // 
             // 
@@ -760,21 +763,22 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Silver;
+            this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMenu.Controls.Add(this.btnCerrar);
             this.panelMenu.Controls.Add(this.pictureBox3);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.pictureBox2);
             this.panelMenu.Controls.Add(this.btnPerfil);
-            this.panelMenu.Location = new System.Drawing.Point(588, 59);
+            this.panelMenu.Location = new System.Drawing.Point(573, 59);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(38, 2);
+            this.panelMenu.Size = new System.Drawing.Size(32, 2);
             this.panelMenu.TabIndex = 5;
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::ProyectoProgV.Properties.Resources.arriba;
-            this.btnCerrar.Location = new System.Drawing.Point(43, 79);
+            this.btnCerrar.Location = new System.Drawing.Point(54, 79);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.TabIndex = 6;
@@ -784,7 +788,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ProyectoProgV.Properties.Resources.exitSesion;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 42);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 30);
             this.pictureBox3.TabIndex = 3;
@@ -792,7 +796,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(38, 42);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(45, 42);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(88, 31);
             this.btnCerrarSesion.TabIndex = 2;
@@ -811,7 +815,7 @@
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Location = new System.Drawing.Point(38, 3);
+            this.btnPerfil.Location = new System.Drawing.Point(45, 3);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(88, 31);
             this.btnPerfil.TabIndex = 0;
@@ -822,7 +826,7 @@
             // btnAbrir
             // 
             this.btnAbrir.Image = global::ProyectoProgV.Properties.Resources.abajo;
-            this.btnAbrir.Location = new System.Drawing.Point(587, 20);
+            this.btnAbrir.Location = new System.Drawing.Point(572, 20);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(40, 40);
             this.btnAbrir.TabIndex = 4;
@@ -831,10 +835,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoProgV.Properties.Resources.nutril_crop_u3908;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 183);
+            this.pictureBox1.Image = global::ProyectoProgV.Properties.Resources.ProfactiFinal2;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 171);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(638, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(702, 301);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -857,7 +861,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 513);
+            this.ClientSize = new System.Drawing.Size(751, 554);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.pictureBox1);

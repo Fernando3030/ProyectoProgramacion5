@@ -81,6 +81,8 @@ namespace ProyectoProgV
             set { estado = value; }
         }
 
+        
+
         public Producto(string codigo, string categoria, string proveedor, string producto, string fechaV, int stock, double precioC, double precioV, bool estado)
         {
             this.codigo = codigo;
@@ -92,6 +94,7 @@ namespace ProyectoProgV
             this.precioC = precioC;
             this.precioV = precioV;
             this.estado = estado;
+           
 
         }
     }

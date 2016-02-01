@@ -196,9 +196,10 @@ namespace ProyectoProgV
             chEstado.ForeColor = Color.Green;
             contador = 0;
             estado = true;
+            dateFecha.Enabled = true;
 
             pictureNombre.Image = null;
-
+            pictureFecha.Image = null;
 
 
 
@@ -217,6 +218,7 @@ namespace ProyectoProgV
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            pictureFecha.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\aprovado.png");
             string codigo = txtCodigo.Text;
             string nombre = txtNombre.Text;
 
@@ -235,6 +237,10 @@ namespace ProyectoProgV
             bool banderaCiudad = false;
 
             bool banderaTelefono = false;
+            
+
+            DateTime fecha = dateFecha.Value;
+            string fechita = fecha.ToString("d");
 
             if (nombre.Equals(""))
             {
@@ -304,7 +310,7 @@ namespace ProyectoProgV
 
                 if (banderaModificar == false)
                 {
-                    Proveedor proveedor = new Proveedor(codigo, nombre, cedula, direccion, telefono, email, ciudad, estado);
+                    Proveedor proveedor = new Proveedor(codigo, nombre, cedula, direccion, telefono, email, ciudad, estado, fechita);
                     int resultado = MetodosBD.InsertarProveedor(proveedor);
                     if (resultado > 0)
                     {
@@ -331,6 +337,7 @@ namespace ProyectoProgV
                         pictureCedula.Image = null;
 
                         pictureEmail.Image = null;
+                        pictureFecha.Image = null;
 
 
 
@@ -365,7 +372,7 @@ namespace ProyectoProgV
 
                     }
                     banderaModificar = false;
-                    int resultado = MetodosBD.ActualizarProveedor(codigo, nombre, cedula, direccion, telefono, email, ciudad, estado2);
+                    int resultado = MetodosBD.ActualizarProveedor(codigo, nombre, cedula, direccion, telefono, email, ciudad, estado2, fechita);
                     if (resultado > 0)
                     {
                         txtCodigo.Text = "";
@@ -384,7 +391,7 @@ namespace ProyectoProgV
                         pictureEstado.Image = null;
                         pictureCodigo.Image = null;
 
-
+                        pictureFecha.Image = null;
                         pictureDireccion.Image = null;
 
                         pictureCedula.Image = null;
@@ -435,6 +442,7 @@ namespace ProyectoProgV
             txtRuc.Enabled = false;
             txtDireccion.Enabled = false;
             txtEmail.Enabled = false;
+            dateFecha.Enabled = false;
 
 
             txtTelefono.Enabled = false;
@@ -484,6 +492,7 @@ namespace ProyectoProgV
                     cbCiudad.SelectedIndex = cbCiudad.FindString(c);
                  
                     bool estado2 = reader.GetBoolean(7);
+                    dateFecha.Value = Convert.ToDateTime(reader.GetString(8));
                     if (estado2)
                     {
                         chEstado.Text = "Activo";
@@ -577,6 +586,7 @@ namespace ProyectoProgV
             btnGuardar.Enabled = true;
             banderaModificar = true;
             txtNombre.Enabled = true;
+            dateFecha.Enabled = true;
             
             txtRuc.Enabled = true;
             txtDireccion.Enabled = true;

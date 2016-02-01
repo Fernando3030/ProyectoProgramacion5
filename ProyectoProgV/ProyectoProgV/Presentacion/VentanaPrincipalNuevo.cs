@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoProgV.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,7 +86,7 @@ namespace ProyectoProgV
 
            
             w = panelMenu.Width;
-            for (int i = panelMenu.Width; i < w + 95; i++ )
+            for (int i = panelMenu.Width; i < w + 110; i++ )
             {
                 panelMenu.Width = i;
                 panelMenu.Height = i;
@@ -169,7 +170,9 @@ namespace ProyectoProgV
 
         private void btnReportProvee_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            ReporteProveedores reporteP = new ReporteProveedores();
+            reporteP.Show();
         }
 
         private void btnMovimiento_Click(object sender, EventArgs e)
@@ -177,6 +180,28 @@ namespace ProyectoProgV
             this.Close();
             EntradaProductos entrada = new EntradaProductos();
             entrada.Show();
+        }
+
+        private void btnReportCliente_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ReporteClientes reportC = new ReporteClientes();
+            reportC.Show();
+
+        }
+
+        private void btnReportUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ReporteUsuarios reportU = new ReporteUsuarios();
+            reportU.Show();
+        }
+
+        private void btnReportFactClient_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            reporteFacturaCliente reportC = new reporteFacturaCliente();
+            reportC.Show();
         }
 
        

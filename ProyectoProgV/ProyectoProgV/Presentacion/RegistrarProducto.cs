@@ -161,25 +161,25 @@ namespace ProyectoProgV
             string producto = txtProducto.Text;
             
             string stock2 = Convert.ToString(txtStock.Text);
-            int stock = Convert.ToInt32(txtStock.Text);
+            int stock = 0;
            // float precioC = float.Parse(txtPrecioC.Text);
 
 
-            double precioC = Convert.ToDouble(txtPrecioC.Text);
-           
-           
-            string precioC2 = Convert.ToString(precioC);
+            double precioC = 0;
+
+
+            string precioC2 = Convert.ToString(txtPrecioC.Text);
 
 
 
 
-            double precioV = Convert.ToDouble(txtPrecioV.Text);
-            
-         
-           
+            double precioV=0;
 
-                       
-            string precioV2 = Convert.ToString(precioV);
+
+
+
+
+            string precioV2 = Convert.ToString(txtPrecioV.Text);
 
             
             
@@ -212,6 +212,7 @@ namespace ProyectoProgV
             else
             {
                 banderaStock = true;
+                stock = Convert.ToInt32(txtStock.Text);
                 pictureStock.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\aprovado.png");
             }
 
@@ -222,6 +223,7 @@ namespace ProyectoProgV
             else
             {
                 banderaPrecioC = true;
+                precioC = Convert.ToDouble(txtPrecioC.Text);
                 picturePrecioC.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\aprovado.png");
             }
 
@@ -232,6 +234,7 @@ namespace ProyectoProgV
             else
             {
                 banderaPrecioV = true;
+                precioV = Convert.ToDouble(txtPrecioV.Text);
                 picturePrecioV.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\aprovado.png");
             }
 

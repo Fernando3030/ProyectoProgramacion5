@@ -63,3 +63,10 @@ C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoPr
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.ReporteProveedores.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.VentanaPrincipalNuevo.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.csproj.GenerateResource.Cache
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormProveedor.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.ReporteClientes.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormClientes.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.ReporteUsuarios.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormFacturaC.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormFacturaCliente.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.reporteFacturaCliente.resources

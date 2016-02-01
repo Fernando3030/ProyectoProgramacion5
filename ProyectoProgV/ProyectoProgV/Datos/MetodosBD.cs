@@ -135,6 +135,32 @@ namespace ProyectoProgV
 
         }
 
+        public static string buscarCedula2(string numFact)
+        {
+
+            string bandera = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select ced_cliente from facturaCliente where numFact_cliente like '%{0}'", numFact), con);
+                //     comando.Parameters.AddWithValue("@cedula", cedula);  // para evitar el sql injection
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+
+
+
+
+        }
+
 
         
 
@@ -384,6 +410,32 @@ namespace ProyectoProgV
             using (SqlConnection con = Conexion.obtenerConexion())
             {
                 SqlCommand comando = new SqlCommand(string.Format("Select cod_producto from producto where producto like '%{0}'", producto), con);
+
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+
+
+
+
+        }
+
+        public static string buscarCodigoProducto5(string producto)
+        {
+
+            string bandera = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select cod_producto from detalleFacturaCliente where numFact_cliente like '%{0}'", producto), con);
 
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -674,6 +726,7 @@ namespace ProyectoProgV
             string telefono;
             string email;
             string ciudad;
+            string fecha;
 
             bool estado;
             List<Proveedor> lista = new List<Proveedor>();
@@ -692,11 +745,12 @@ namespace ProyectoProgV
                     email = reader.GetString(5);
                     ciudad  = reader.GetString(6);
                     estado = reader.GetBoolean(7);
+                    fecha = reader.GetString(8);
 
                     bool x = buscarEstadoProveedor(cod);
                     if(x==true)
                     {
-                        Proveedor pro = new Proveedor(cod, nombre, ruc, direccion, telefono, email, ciudad, estado);
+                        Proveedor pro = new Proveedor(cod, nombre, ruc, direccion, telefono, email, ciudad, estado, fecha);
                         lista.Add(pro);
                     }
                     
@@ -1159,7 +1213,7 @@ namespace ProyectoProgV
             int retorno = 0; // en el caso de que no se inserter el registro retornara cero
             using (SqlConnection con = Conexion.obtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("Insert into proveedor(cod_proveedor, razon_social, ruc, dir_proveedor, telf_proveedor, email_proveedor, cod_ciudad, estado_proveedor) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", usuario.Codigo, usuario.Nombre, usuario.Ruc, usuario.Direccion, usuario.Telefono, usuario.Email, usuario.Ciudad, usuario.Estado), con);
+                SqlCommand comando = new SqlCommand(string.Format("Insert into proveedor(cod_proveedor, razon_social, ruc, dir_proveedor, telf_proveedor, email_proveedor, cod_ciudad, estado_proveedor, fechaIngreso) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", usuario.Codigo, usuario.Nombre, usuario.Ruc, usuario.Direccion, usuario.Telefono, usuario.Email, usuario.Ciudad, usuario.Estado, usuario.FechaI), con);
                 retorno = comando.ExecuteNonQuery();
 
                 con.Close();
@@ -1260,12 +1314,12 @@ namespace ProyectoProgV
             return retorno;
         }
 
-        public static int ActualizarProveedor(string codigo, string nombre, string cedula, string direccion, string telefono, string email, string ciudad, bool estado)
+        public static int ActualizarProveedor(string codigo, string nombre, string cedula, string direccion, string telefono, string email, string ciudad, bool estado, string fecha)
         {
             int retorno = 0; // en el caso de que no se borre el registro retornara cero
             using (SqlConnection con = Conexion.obtenerConexion())
             {
-                SqlCommand comando = new SqlCommand("update proveedor set cod_proveedor='" + codigo + "',  razon_social='" + nombre + "', ruc='" + cedula + "', dir_proveedor='" + direccion + "', telf_proveedor='" + telefono + "', email_proveedor='" + email + "', cod_ciudad='" + ciudad + "', estado_proveedor='" + estado + "' where cod_proveedor like '" + codigo + "'", con);
+                SqlCommand comando = new SqlCommand("update proveedor set cod_proveedor='" + codigo + "',  razon_social='" + nombre + "', ruc='" + cedula + "', dir_proveedor='" + direccion + "', telf_proveedor='" + telefono + "', email_proveedor='" + email + "', cod_ciudad='" + ciudad + "', estado_proveedor='" + estado + "', fechaIngreso='" + fecha + "' where cod_proveedor like '" + codigo + "'", con);
                 retorno = comando.ExecuteNonQuery();
                 con.Close();
             }

@@ -65,7 +65,15 @@ namespace ProyectoProgV
             set { estado = value; }
         }
 
-        public Proveedor(string codigo, string nombre, string ruc, string direccion, string telefono, string email, string ciudad, bool estado)
+        string fechaI;
+
+        public string FechaI
+        {
+            get { return fechaI; }
+            set { fechaI = value; }
+        }
+
+        public Proveedor(string codigo, string nombre, string ruc, string direccion, string telefono, string email, string ciudad, bool estado, string fechaI)
         {
             this.codigo = codigo;
             this.nombre = nombre;
@@ -75,6 +83,7 @@ namespace ProyectoProgV
             this.email = email;
             this.ciudad = ciudad;
             this.estado = estado;
+            this.fechaI = fechaI;
 
         }
 

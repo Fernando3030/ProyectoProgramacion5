@@ -19,7 +19,7 @@ namespace ProyectoProgV
 
         private void lectorPDF_Load(object sender, EventArgs e)
         {
-            pdf.LoadFile("C:\\Users\\Usuario\\Documents\\Youcam\\w.pdf");
+            pdf.LoadFile(@"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\Manual User\Manual.pdf");
         }
     }
 }

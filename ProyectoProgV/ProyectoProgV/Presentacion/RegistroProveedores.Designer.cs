@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new MetroFramework.Controls.MetroTextBox();
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
@@ -69,6 +69,9 @@
             this.rbCedula = new MetroFramework.Controls.MetroRadioButton();
             this.rbNombre = new MetroFramework.Controls.MetroRadioButton();
             this.txtBusqueda = new MetroFramework.Controls.MetroTextBox();
+            this.pictureFecha = new System.Windows.Forms.PictureBox();
+            this.dateFecha = new MetroFramework.Controls.MetroDateTime();
+            this.lblFechaV = new System.Windows.Forms.Label();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCedula)).BeginInit();
@@ -80,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureCodigo)).BeginInit();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -214,7 +218,7 @@
             this.txtEmail.Enabled = false;
             this.txtEmail.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(91, 274);
+            this.txtEmail.Location = new System.Drawing.Point(91, 308);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -234,7 +238,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 277);
+            this.label2.Location = new System.Drawing.Point(12, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 10;
@@ -293,6 +297,9 @@
             // 
             this.panelCentral.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCentral.Controls.Add(this.pictureFecha);
+            this.panelCentral.Controls.Add(this.dateFecha);
+            this.panelCentral.Controls.Add(this.lblFechaV);
             this.panelCentral.Controls.Add(this.pictureEmail);
             this.panelCentral.Controls.Add(this.pictureCedula);
             this.panelCentral.Controls.Add(this.pictureTelefono);
@@ -322,7 +329,7 @@
             this.panelCentral.HorizontalScrollbarSize = 10;
             this.panelCentral.Location = new System.Drawing.Point(8, 63);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(296, 322);
+            this.panelCentral.Size = new System.Drawing.Size(296, 356);
             this.panelCentral.Style = MetroFramework.MetroColorStyle.Blue;
             this.panelCentral.TabIndex = 15;
             this.panelCentral.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -335,7 +342,7 @@
             // 
             // pictureEmail
             // 
-            this.pictureEmail.Location = new System.Drawing.Point(251, 272);
+            this.pictureEmail.Location = new System.Drawing.Point(251, 306);
             this.pictureEmail.Name = "pictureEmail";
             this.pictureEmail.Size = new System.Drawing.Size(32, 32);
             this.pictureEmail.TabIndex = 25;
@@ -524,7 +531,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(310, 327);
+            this.metroPanel1.Location = new System.Drawing.Point(310, 361);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(544, 55);
             this.metroPanel1.TabIndex = 21;
@@ -541,23 +548,23 @@
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -565,17 +572,17 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(534, 227);
+            this.dataGridView.Size = new System.Drawing.Size(544, 261);
             this.dataGridView.TabIndex = 22;
             this.dataGridView.UseCustomBackColor = true;
             this.dataGridView.UseCustomForeColor = true;
@@ -648,13 +655,13 @@
             this.txtBusqueda.Enabled = false;
             this.txtBusqueda.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtBusqueda.Lines = new string[0];
-            this.txtBusqueda.Location = new System.Drawing.Point(687, 59);
+            this.txtBusqueda.Location = new System.Drawing.Point(687, 58);
             this.txtBusqueda.MaxLength = 32767;
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.PasswordChar = '\0';
             this.txtBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBusqueda.SelectedText = "";
-            this.txtBusqueda.Size = new System.Drawing.Size(154, 29);
+            this.txtBusqueda.Size = new System.Drawing.Size(167, 29);
             this.txtBusqueda.Style = MetroFramework.MetroColorStyle.Brown;
             this.txtBusqueda.TabIndex = 26;
             this.txtBusqueda.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -664,11 +671,39 @@
             this.txtBusqueda.UseStyleColors = true;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
+            // pictureFecha
+            // 
+            this.pictureFecha.Location = new System.Drawing.Point(250, 270);
+            this.pictureFecha.Name = "pictureFecha";
+            this.pictureFecha.Size = new System.Drawing.Size(32, 32);
+            this.pictureFecha.TabIndex = 28;
+            this.pictureFecha.TabStop = false;
+            // 
+            // dateFecha
+            // 
+            this.dateFecha.Enabled = false;
+            this.dateFecha.Location = new System.Drawing.Point(91, 271);
+            this.dateFecha.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateFecha.Name = "dateFecha";
+            this.dateFecha.Size = new System.Drawing.Size(154, 29);
+            this.dateFecha.Style = MetroFramework.MetroColorStyle.Brown;
+            this.dateFecha.TabIndex = 27;
+            // 
+            // lblFechaV
+            // 
+            this.lblFechaV.AutoSize = true;
+            this.lblFechaV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaV.Location = new System.Drawing.Point(11, 275);
+            this.lblFechaV.Name = "lblFechaV";
+            this.lblFechaV.Size = new System.Drawing.Size(53, 21);
+            this.lblFechaV.TabIndex = 26;
+            this.lblFechaV.Text = "Fecha:";
+            // 
             // RegistroProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 396);
+            this.ClientSize = new System.Drawing.Size(867, 433);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.rbNombre);
             this.Controls.Add(this.rbCedula);
@@ -695,6 +730,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureCodigo)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,5 +776,8 @@
         private MetroFramework.Controls.MetroRadioButton rbCedula;
         private MetroFramework.Controls.MetroRadioButton rbNombre;
         private MetroFramework.Controls.MetroTextBox txtBusqueda;
+        private System.Windows.Forms.PictureBox pictureFecha;
+        private MetroFramework.Controls.MetroDateTime dateFecha;
+        private System.Windows.Forms.Label lblFechaV;
     }
 }
