@@ -100,9 +100,18 @@ namespace ProyectoProgV
             set { codigoCiudad = value; }
         }
 
+        string fecha;
+
+        public string Fecha
+        {
+            get { return fecha; }
+            set { fecha = value; }
+        }
+
+
        
 
-        public Usuarios (string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipoEmpleado, string url, string codigoC, bool estado)
+        public Usuarios (string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipoEmpleado, string url, string codigoC, bool estado, string fechaI)
     {
             this.codigo= codigo;
             this.nombre= nombre;
@@ -117,6 +126,7 @@ namespace ProyectoProgV
             this.url = url;
             this.codigoCiudad = codigoC;
             this.estado = estado;
+            this.fecha = fechaI;
 
     }
 

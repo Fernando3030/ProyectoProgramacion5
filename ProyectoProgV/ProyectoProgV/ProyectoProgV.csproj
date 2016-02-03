@@ -53,8 +53,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
-    <Reference Include="System.Windows.Forms.Ribbon35">
-      <HintPath>C:\Users\Usuario\Documents\System.Windows.Forms.Ribbon35.dll</HintPath>
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ProyectoMusical\ProyectoMusical\bin\Debug\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -87,6 +88,12 @@
     <Compile Include="Presentacion\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FormProveedoresParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FormProveedoresParametros.Designer.cs">
+      <DependentUpon>FormProveedoresParametros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FormFacturaC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,12 @@
     </Compile>
     <Compile Include="Presentacion\FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FormUsuariosParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FormUsuariosParametros.Designer.cs">
+      <DependentUpon>FormUsuariosParametros.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Movimientos.cs">
       <SubType>Form</SubType>
@@ -180,6 +193,12 @@
       <DependentUpon>reporteProveedor.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Presentacion\reporteProveedoresParametros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteProveedoresParametros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentacion\reporteUser.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,10 +211,10 @@
     <Compile Include="Presentacion\ReporteUsuarios.Designer.cs">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\reportFacturaC.cs">
+    <Compile Include="Presentacion\reporteUsuariosParametros.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>reportFacturaC.rpt</DependentUpon>
+      <DependentUpon>reporteUsuariosParametros.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -251,6 +270,9 @@
     <EmbeddedResource Include="Presentacion\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormProveedoresParametros.resx">
+      <DependentUpon>FormProveedoresParametros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormFacturaC.resx">
       <DependentUpon>FormFacturaC.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormUsuariosParametros.resx">
+      <DependentUpon>FormUsuariosParametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Movimientos.resx">
       <DependentUpon>Movimientos.cs</DependentUpon>
@@ -296,6 +321,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteProveedor.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\reporteProveedoresParametros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteProveedoresParametros.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\reporteUser.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteUser.cs</LastGenOutput>
@@ -303,9 +332,9 @@
     <EmbeddedResource Include="Presentacion\ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\reportFacturaC.rpt">
+    <EmbeddedResource Include="Presentacion\reporteUsuariosParametros.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reportFacturaC.cs</LastGenOutput>
+      <LastGenOutput>reporteUsuariosParametros.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

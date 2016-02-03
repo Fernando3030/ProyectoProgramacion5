@@ -1,6 +1,6 @@
 ﻿namespace ProyectoProgV.Presentacion
 {
-    partial class FormFacturaC
+    partial class FormProveedoresParametros
     {
         /// <summary>
         /// Required designer variable.
@@ -40,21 +40,20 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(20, 60);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(749, 700);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(962, 476);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // FormFacturaC
+            // FormProveedoresParametros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 780);
+            this.ClientSize = new System.Drawing.Size(1002, 556);
             this.Controls.Add(this.crystalReportViewer1);
-            this.MaximizeBox = false;
-            this.Name = "FormFacturaC";
-            this.Resizable = false;
-            this.Text = "FormFacturaC";
-            this.Load += new System.EventHandler(this.FormFacturaC_Load);
+            this.Name = "FormProveedoresParametros";
+            this.Style = MetroFramework.MetroColorStyle.Brown;
+            this.Text = "Reporte Proveedores";
+            this.Load += new System.EventHandler(this.FormProveedoresParametros_Load);
             this.ResumeLayout(false);
 
         }

@@ -40,8 +40,6 @@
             this.rbTodos = new MetroFramework.Controls.MetroRadioButton();
             this.rbFecha = new MetroFramework.Controls.MetroRadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chEstado = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelCentral.SuspendLayout();
             this.panelOpciones.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -51,8 +49,6 @@
             // 
             this.panelCentral.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCentral.Controls.Add(this.chEstado);
-            this.panelCentral.Controls.Add(this.label4);
             this.panelCentral.Controls.Add(this.dateHasta);
             this.panelCentral.Controls.Add(this.label1);
             this.panelCentral.Controls.Add(this.dateDesde);
@@ -62,7 +58,7 @@
             this.panelCentral.HorizontalScrollbarSize = 10;
             this.panelCentral.Location = new System.Drawing.Point(23, 148);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(324, 118);
+            this.panelCentral.Size = new System.Drawing.Size(324, 97);
             this.panelCentral.Style = MetroFramework.MetroColorStyle.Blue;
             this.panelCentral.TabIndex = 15;
             this.panelCentral.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -163,7 +159,7 @@
             this.panelOpciones.HorizontalScrollbarBarColor = true;
             this.panelOpciones.HorizontalScrollbarHighlightOnWheel = false;
             this.panelOpciones.HorizontalScrollbarSize = 10;
-            this.panelOpciones.Location = new System.Drawing.Point(91, 272);
+            this.panelOpciones.Location = new System.Drawing.Point(91, 250);
             this.panelOpciones.Name = "panelOpciones";
             this.panelOpciones.Size = new System.Drawing.Size(191, 56);
             this.panelOpciones.TabIndex = 21;
@@ -212,35 +208,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
-            // chEstado
-            // 
-            this.chEstado.AutoSize = true;
-            this.chEstado.Enabled = false;
-            this.chEstado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chEstado.ForeColor = System.Drawing.Color.Green;
-            this.chEstado.Location = new System.Drawing.Point(77, 80);
-            this.chEstado.Name = "chEstado";
-            this.chEstado.Size = new System.Drawing.Size(78, 25);
-            this.chEstado.TabIndex = 31;
-            this.chEstado.Text = "Activo";
-            this.chEstado.UseVisualStyleBackColor = true;
-            this.chEstado.CheckedChanged += new System.EventHandler(this.chEstado_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 21);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Estado:";
-            // 
             // ReporteProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 340);
+            this.ClientSize = new System.Drawing.Size(366, 321);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelOpciones);
             this.Controls.Add(this.panelCentral);
@@ -273,7 +245,5 @@
         private MetroFramework.Controls.MetroRadioButton rbTodos;
         private MetroFramework.Controls.MetroRadioButton rbFecha;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chEstado;
-        private System.Windows.Forms.Label label4;
     }
 }

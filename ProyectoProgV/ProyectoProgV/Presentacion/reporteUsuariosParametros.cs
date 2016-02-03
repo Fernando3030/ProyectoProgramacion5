@@ -16,14 +16,14 @@ namespace ProyectoProgV.Presentacion {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class reportFacturaC : ReportClass {
+    public class reporteUsuariosParametros : ReportClass {
         
-        public reportFacturaC() {
+        public reporteUsuariosParametros() {
         }
         
         public override string ResourceName {
             get {
-                return "reportFacturaC.rpt";
+                return "reporteUsuariosParametros.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace ProyectoProgV.Presentacion {
         
         public override string FullResourceName {
             get {
-                return "ProyectoProgV.Presentacion.reportFacturaC.rpt";
+                return "ProyectoProgV.Presentacion.reporteUsuariosParametros.rpt";
             }
             set {
                 // Do nothing
@@ -90,17 +90,25 @@ namespace ProyectoProgV.Presentacion {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_numFact {
+        public CrystalDecisions.Shared.IParameterField Parameter_fechaDesde {
             get {
                 return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_fechaHasta {
+            get {
+                return this.DataDefinition.ParameterFields[1];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedreportFacturaC : Component, ICachedReport {
+    public class CachedreporteUsuariosParametros : Component, ICachedReport {
         
-        public CachedreportFacturaC() {
+        public CachedreporteUsuariosParametros() {
         }
         
         [Browsable(false)]
@@ -137,7 +145,7 @@ namespace ProyectoProgV.Presentacion {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            reportFacturaC rpt = new reportFacturaC();
+            reporteUsuariosParametros rpt = new reporteUsuariosParametros();
             rpt.Site = this.Site;
             return rpt;
         }

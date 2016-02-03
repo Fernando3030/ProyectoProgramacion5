@@ -50,7 +50,7 @@ namespace ProyectoProgV.Presentacion
             todos = true;
             dateDesde.Enabled = false;
             dateHasta.Enabled = false;
-            chEstado.Enabled = false;
+           
             btnGenerar.Enabled = true;
         }
 
@@ -59,37 +59,22 @@ namespace ProyectoProgV.Presentacion
             todos = false;
             dateDesde.Enabled = true;
             dateHasta.Enabled = true;
-            chEstado.Enabled = true;
+          
             btnGenerar.Enabled = true;
 
         }
 
-        private void chEstado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chEstado.Checked)
-            {
-                chEstado.Text = "Inactivo";
-                chEstado.ForeColor = Color.Red;
-                contador = contador + 1;
-                estado = false;
-
-            }
-            else
-            {
-
-                chEstado.Text = "Activo";
-                chEstado.ForeColor = Color.Green;
-                contador = 0;
-                estado = true;
-
-            }
-        }
-
+      
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
             VentanaPrincipalNuevo ventana = new VentanaPrincipalNuevo();
             ventana.Show();
+        }
+
+        private void panelOpciones_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

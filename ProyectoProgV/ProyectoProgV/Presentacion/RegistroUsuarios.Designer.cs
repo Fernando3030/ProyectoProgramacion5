@@ -88,6 +88,9 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.rbCedula = new MetroFramework.Controls.MetroRadioButton();
             this.panelTransparente1 = new ProyectoProgV.PanelTransparente();
+            this.pictureFecha = new System.Windows.Forms.PictureBox();
+            this.dateFecha = new MetroFramework.Controls.MetroDateTime();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTelefono)).BeginInit();
@@ -105,6 +108,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -113,7 +117,7 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(12, 80);
+            this.lblNombre.Location = new System.Drawing.Point(5, 80);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(75, 21);
             this.lblNombre.TabIndex = 3;
@@ -125,7 +129,7 @@
             this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(12, 12);
+            this.lblCodigo.Location = new System.Drawing.Point(5, 12);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(68, 21);
             this.lblCodigo.TabIndex = 1;
@@ -156,7 +160,7 @@
             this.lblApellido.BackColor = System.Drawing.Color.Transparent;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.Black;
-            this.lblApellido.Location = new System.Drawing.Point(12, 116);
+            this.lblApellido.Location = new System.Drawing.Point(5, 116);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(72, 21);
             this.lblApellido.TabIndex = 5;
@@ -178,7 +182,7 @@
             this.lblCedula.BackColor = System.Drawing.Color.Transparent;
             this.lblCedula.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.Black;
-            this.lblCedula.Location = new System.Drawing.Point(12, 155);
+            this.lblCedula.Location = new System.Drawing.Point(5, 155);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(64, 21);
             this.lblCedula.TabIndex = 7;
@@ -200,7 +204,7 @@
             this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(13, 229);
+            this.lblDireccion.Location = new System.Drawing.Point(6, 266);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(83, 21);
             this.lblDireccion.TabIndex = 9;
@@ -210,7 +214,7 @@
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(120, 227);
+            this.txtDireccion.Location = new System.Drawing.Point(120, 264);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(135, 22);
             this.txtDireccion.TabIndex = 8;
@@ -221,7 +225,7 @@
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(13, 300);
+            this.lblEmail.Location = new System.Drawing.Point(6, 337);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(52, 21);
             this.lblEmail.TabIndex = 11;
@@ -231,7 +235,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(120, 298);
+            this.txtEmail.Location = new System.Drawing.Point(120, 335);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(135, 22);
             this.txtEmail.TabIndex = 10;
@@ -243,7 +247,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(14, 372);
+            this.lblUsuario.Location = new System.Drawing.Point(7, 409);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(69, 21);
             this.lblUsuario.TabIndex = 13;
@@ -253,7 +257,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(122, 373);
+            this.txtUsuario.Location = new System.Drawing.Point(122, 410);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(133, 22);
             this.txtUsuario.TabIndex = 12;
@@ -263,6 +267,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureFecha);
+            this.panel1.Controls.Add(this.dateFecha);
             this.panel1.Controls.Add(this.pictureEstado);
             this.panel1.Controls.Add(this.chEstado);
             this.panel1.Controls.Add(this.label4);
@@ -301,7 +308,7 @@
             this.panel1.Controls.Add(this.txtCodigo);
             this.panel1.Location = new System.Drawing.Point(11, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 447);
+            this.panel1.Size = new System.Drawing.Size(296, 480);
             this.panel1.TabIndex = 14;
             // 
             // pictureEstado
@@ -333,7 +340,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 45);
+            this.label4.Location = new System.Drawing.Point(5, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 34;
@@ -345,9 +352,9 @@
             this.cbTipoUsuario.Enabled = false;
             this.cbTipoUsuario.FormattingEnabled = true;
             this.cbTipoUsuario.ItemHeight = 23;
-            this.cbTipoUsuario.Location = new System.Drawing.Point(119, 330);
+            this.cbTipoUsuario.Location = new System.Drawing.Point(120, 367);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
-            this.cbTipoUsuario.Size = new System.Drawing.Size(134, 29);
+            this.cbTipoUsuario.Size = new System.Drawing.Size(133, 29);
             this.cbTipoUsuario.Style = MetroFramework.MetroColorStyle.Brown;
             this.cbTipoUsuario.TabIndex = 33;
             this.cbTipoUsuario.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -359,7 +366,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 265);
+            this.label2.Location = new System.Drawing.Point(6, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 32;
@@ -370,7 +377,7 @@
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Enabled = false;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(120, 263);
+            this.txtTelefono.Location = new System.Drawing.Point(120, 300);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(135, 22);
             this.txtTelefono.TabIndex = 31;
@@ -378,7 +385,7 @@
             // 
             // pictureTelefono
             // 
-            this.pictureTelefono.Location = new System.Drawing.Point(258, 257);
+            this.pictureTelefono.Location = new System.Drawing.Point(258, 294);
             this.pictureTelefono.Name = "pictureTelefono";
             this.pictureTelefono.Size = new System.Drawing.Size(32, 32);
             this.pictureTelefono.TabIndex = 30;
@@ -386,7 +393,7 @@
             // 
             // pictureUsuario
             // 
-            this.pictureUsuario.Location = new System.Drawing.Point(258, 368);
+            this.pictureUsuario.Location = new System.Drawing.Point(258, 405);
             this.pictureUsuario.Name = "pictureUsuario";
             this.pictureUsuario.Size = new System.Drawing.Size(32, 32);
             this.pictureUsuario.TabIndex = 29;
@@ -394,7 +401,7 @@
             // 
             // pictureTipo
             // 
-            this.pictureTipo.Location = new System.Drawing.Point(258, 330);
+            this.pictureTipo.Location = new System.Drawing.Point(258, 367);
             this.pictureTipo.Name = "pictureTipo";
             this.pictureTipo.Size = new System.Drawing.Size(32, 32);
             this.pictureTipo.TabIndex = 28;
@@ -402,7 +409,7 @@
             // 
             // pictureEmail
             // 
-            this.pictureEmail.Location = new System.Drawing.Point(258, 293);
+            this.pictureEmail.Location = new System.Drawing.Point(258, 330);
             this.pictureEmail.Name = "pictureEmail";
             this.pictureEmail.Size = new System.Drawing.Size(32, 32);
             this.pictureEmail.TabIndex = 27;
@@ -410,7 +417,7 @@
             // 
             // pictureDireccion
             // 
-            this.pictureDireccion.Location = new System.Drawing.Point(258, 221);
+            this.pictureDireccion.Location = new System.Drawing.Point(258, 258);
             this.pictureDireccion.Name = "pictureDireccion";
             this.pictureDireccion.Size = new System.Drawing.Size(32, 32);
             this.pictureDireccion.TabIndex = 26;
@@ -434,7 +441,7 @@
             // 
             // pictureContra
             // 
-            this.pictureContra.Location = new System.Drawing.Point(258, 405);
+            this.pictureContra.Location = new System.Drawing.Point(258, 442);
             this.pictureContra.Name = "pictureContra";
             this.pictureContra.Size = new System.Drawing.Size(32, 32);
             this.pictureContra.TabIndex = 23;
@@ -484,7 +491,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 191);
+            this.label1.Location = new System.Drawing.Point(4, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 21);
             this.label1.TabIndex = 18;
@@ -496,7 +503,7 @@
             this.lblTipoUser.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoUser.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoUser.ForeColor = System.Drawing.Color.Black;
-            this.lblTipoUser.Location = new System.Drawing.Point(12, 335);
+            this.lblTipoUser.Location = new System.Drawing.Point(5, 372);
             this.lblTipoUser.Name = "lblTipoUser";
             this.lblTipoUser.Size = new System.Drawing.Size(106, 21);
             this.lblTipoUser.TabIndex = 16;
@@ -508,7 +515,7 @@
             this.lblPass.BackColor = System.Drawing.Color.Transparent;
             this.lblPass.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.Black;
-            this.lblPass.Location = new System.Drawing.Point(14, 411);
+            this.lblPass.Location = new System.Drawing.Point(7, 448);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(96, 21);
             this.lblPass.TabIndex = 15;
@@ -518,7 +525,7 @@
             // 
             this.txtPass.BackColor = System.Drawing.Color.White;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(122, 411);
+            this.txtPass.Location = new System.Drawing.Point(122, 448);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(133, 22);
@@ -575,7 +582,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnModificar);
             this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel1.Controls.Add(this.btnSalir);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(401, 443);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(401, 477);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(464, 51);
             this.flowLayoutPanel1.TabIndex = 20;
@@ -737,7 +744,7 @@
             this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(441, 327);
+            this.dataGridView.Size = new System.Drawing.Size(441, 361);
             this.dataGridView.TabIndex = 24;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView_DataBindingComplete);
@@ -798,9 +805,9 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.White;
             this.txtBusqueda.Enabled = false;
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(659, 78);
+            this.txtBusqueda.Location = new System.Drawing.Point(636, 79);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(135, 26);
+            this.txtBusqueda.Size = new System.Drawing.Size(206, 26);
             this.txtBusqueda.TabIndex = 34;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
@@ -830,12 +837,42 @@
             this.panelTransparente1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragDrop);
             this.panelTransparente1.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragOver);
             // 
+            // pictureFecha
+            // 
+            this.pictureFecha.Location = new System.Drawing.Point(257, 222);
+            this.pictureFecha.Name = "pictureFecha";
+            this.pictureFecha.Size = new System.Drawing.Size(32, 32);
+            this.pictureFecha.TabIndex = 39;
+            this.pictureFecha.TabStop = false;
+            // 
+            // dateFecha
+            // 
+            this.dateFecha.Enabled = false;
+            this.dateFecha.Location = new System.Drawing.Point(120, 223);
+            this.dateFecha.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateFecha.Name = "dateFecha";
+            this.dateFecha.Size = new System.Drawing.Size(134, 29);
+            this.dateFecha.Style = MetroFramework.MetroColorStyle.Brown;
+            this.dateFecha.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(4, 227);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Fecha Ingreso:";
+            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgV.Properties.Resources.RegistroUsuariosPlatinlla;
-            this.ClientSize = new System.Drawing.Size(952, 512);
+            this.ClientSize = new System.Drawing.Size(952, 541);
             this.Controls.Add(this.rbCedula);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.rbNombre);
@@ -855,7 +892,7 @@
             this.Name = "RegistroUsuarios";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Brown;
-            this.Text = "Gestionar Usuarios";
+            this.Text = "Gestionar Empleados";
             this.Load += new System.EventHandler(this.RegistroUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -875,6 +912,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFecha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -939,5 +977,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chEstado;
         private System.Windows.Forms.PictureBox pictureEstado;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureFecha;
+        private MetroFramework.Controls.MetroDateTime dateFecha;
     }
 }

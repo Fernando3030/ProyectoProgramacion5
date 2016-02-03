@@ -37,6 +37,7 @@
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
+            this.panelTransparente1 = new ProyectoProgV.PanelTransparente();
             this.btnCargarFoto = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -101,7 +102,6 @@
             this.btnGuardar2 = new MetroFramework.Controls.MetroButton();
             this.btnNuevo2 = new MetroFramework.Controls.MetroButton();
             this.label23 = new System.Windows.Forms.Label();
-            this.panelTransparente1 = new ProyectoProgV.PanelTransparente();
             this.metroTabControl1.SuspendLayout();
             this.tab1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -140,7 +140,7 @@
             this.metroTabControl1.Controls.Add(this.tab2);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 85);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(642, 636);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
@@ -165,6 +165,16 @@
             this.tab1.Size = new System.Drawing.Size(634, 594);
             this.tab1.TabIndex = 2;
             this.tab1.Text = "Control de Pagos";
+            // 
+            // panelTransparente1
+            // 
+            this.panelTransparente1.AllowDrop = true;
+            this.panelTransparente1.Location = new System.Drawing.Point(365, 14);
+            this.panelTransparente1.Name = "panelTransparente1";
+            this.panelTransparente1.Size = new System.Drawing.Size(254, 293);
+            this.panelTransparente1.TabIndex = 9;
+            this.panelTransparente1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragDrop);
+            this.panelTransparente1.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragOver);
             // 
             // btnCargarFoto
             // 
@@ -386,7 +396,7 @@
             // 
             this.dateEntrega.Enabled = false;
             this.dateEntrega.Location = new System.Drawing.Point(14, 129);
-            this.dateEntrega.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dateEntrega.MinimumSize = new System.Drawing.Size(0, 29);
             this.dateEntrega.Name = "dateEntrega";
             this.dateEntrega.Size = new System.Drawing.Size(164, 29);
             this.dateEntrega.Style = MetroFramework.MetroColorStyle.Brown;
@@ -1058,16 +1068,6 @@
             this.label23.Size = new System.Drawing.Size(81, 21);
             this.label23.TabIndex = 7;
             this.label23.Text = "Opciones";
-            // 
-            // panelTransparente1
-            // 
-            this.panelTransparente1.AllowDrop = true;
-            this.panelTransparente1.Location = new System.Drawing.Point(365, 14);
-            this.panelTransparente1.Name = "panelTransparente1";
-            this.panelTransparente1.Size = new System.Drawing.Size(254, 293);
-            this.panelTransparente1.TabIndex = 9;
-            this.panelTransparente1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragDrop);
-            this.panelTransparente1.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTransparente1_DragOver);
             // 
             // FacturaProveedores
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace ProyectoProgV.Presentacion
 {
@@ -32,7 +33,7 @@ namespace ProyectoProgV.Presentacion
             todos = true;
             dateDesde.Enabled = false;
             dateHasta.Enabled = false;
-            chEstado.Enabled = false;
+           
             btnGenerar.Enabled = true;
         }
 
@@ -41,31 +42,11 @@ namespace ProyectoProgV.Presentacion
             todos = false;
             dateDesde.Enabled = true;
             dateHasta.Enabled = true;
-            chEstado.Enabled = true;
+           
             btnGenerar.Enabled = true;
         }
 
-        private void chEstado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chEstado.Checked)
-            {
-                chEstado.Text = "Inactivo";
-                chEstado.ForeColor = Color.Red;
-                contador = contador + 1;
-                estado = false;
-
-            }
-            else
-            {
-
-                chEstado.Text = "Activo";
-                chEstado.ForeColor = Color.Green;
-                contador = 0;
-                estado = true;
-
-            }
-        }
-
+       
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -87,8 +68,44 @@ namespace ProyectoProgV.Presentacion
             }
             else
             {
-                MessageBox.Show("Aun falta esto");
-                // aqui va si elije la opcion de fecha
+                DateTime fecha = dateDesde.Value;
+                string fechaDesde = fecha.ToString("d");
+
+                DateTime fecha2 = dateHasta.Value;
+                string fechaHasta = fecha2.ToString("d");
+
+                FormProveedoresParametros form = new FormProveedoresParametros();
+
+
+
+                ReportDocument oRep = new ReportDocument();
+
+
+                ParameterField pf = new ParameterField();
+                ParameterFields pfs = new ParameterFields();
+                ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                pf.Name = "@fechaDesde";
+                pdv.Value = fechaDesde;
+                pf.CurrentValues.Add(pdv);
+
+                pfs.Add(pf);
+
+                pfs.Clear();
+
+
+                pf.Name = "@fechaHasta";
+                pdv.Value = fechaHasta;
+                pf.CurrentValues.Add(pdv);
+
+                pfs.Add(pf);
+
+
+
+
+                form.crystalReportViewer1.ParameterFieldInfo = pfs;
+                oRep.Load(@"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\Presentacion\reporteUsuariosParametros.rpt");
+                form.crystalReportViewer1.ReportSource = oRep;
+                form.Show();
             }
         }
     }

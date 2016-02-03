@@ -101,6 +101,8 @@ namespace ProyectoProgV
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             banderaModificar = false;
+            dateFecha.Enabled = true;
+            pictureFecha.Image = null;
             txtCodigo.Text = codigo;
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -266,6 +268,7 @@ namespace ProyectoProgV
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            pictureFecha.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\aprovado.png");
             string codigo= txtCodigo.Text;
             string nombre= txtNombre.Text;
             string apellido= txtApellido.Text;
@@ -289,6 +292,8 @@ namespace ProyectoProgV
             bool banderaTipo = false;
             bool banderaUrl = false;
             bool banderaTelefono=false;
+            DateTime fecha = dateFecha.Value;
+            string fechita = fecha.ToString("d");
             if(nombre.Equals(""))
             {
                 pictureNombre.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\error.png");
@@ -406,7 +411,7 @@ namespace ProyectoProgV
 
                  if(banderaModificar== false)
                  {
-                     Usuarios usuario = new Usuarios(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado);
+                     Usuarios usuario = new Usuarios(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado, fechita);
                      int resultado = MetodosBD.InsertarUsuario(usuario);
                      if (resultado > 0)
                      {
@@ -425,6 +430,7 @@ namespace ProyectoProgV
                          btnCargarFoto.Enabled = false;
                          pictureNombre.Image = null;
                          estado = true;
+                         pictureFecha.Image = null;
 
                          pictureApellido.Image = null;
                          pictureEstado.Image = null;
@@ -475,7 +481,7 @@ namespace ProyectoProgV
                          }
                        
                      }
-                     int resultado = MetodosBD.ActualizarUsuario(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado2);
+                     int resultado = MetodosBD.ActualizarUsuario(codigo, cedula, nombre, apellido, direccion, telefono, email, user, contra, comboTipo, url, ciudad, estado2, fechita);
                      if (resultado > 0)
                      {
                          txtCodigo.Text = "";
@@ -490,6 +496,7 @@ namespace ProyectoProgV
 
                          btnCargarFoto.Enabled = false;
                          pictureNombre.Image = null;
+                         pictureFecha.Image = null;
 
                          pictureApellido.Image = null;
                          pictureEstado.Image = null;
@@ -633,6 +640,7 @@ namespace ProyectoProgV
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             txtCedula.Enabled = false;
+            dateFecha.Enabled = false;
             txtDireccion.Enabled = false;
             txtEmail.Enabled = false;
             txtPass.Enabled = false;
@@ -650,6 +658,7 @@ namespace ProyectoProgV
           
                 pictureApellido.Image = null;
                 pictureBox1.Image = null;
+                pictureFecha.Image = null;
 
 
 
@@ -695,6 +704,7 @@ namespace ProyectoProgV
                         string c = MetodosBD.buscarCiudad(reader.GetString(11));
                         cbCiudad.SelectedIndex = cbCiudad.FindString(c);
                         bool estado2 = reader.GetBoolean(12);
+                        dateFecha.Value = Convert.ToDateTime(reader.GetString(13));
                         if(estado2)
                         {
                             chEstado.Text = "Activo";
@@ -806,6 +816,7 @@ namespace ProyectoProgV
             cbCiudad.Enabled = true;
             txtUsuario.Enabled = true;
             btnCargarFoto.Enabled = true;
+            dateFecha.Enabled = true;
         }
 
         private void dataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

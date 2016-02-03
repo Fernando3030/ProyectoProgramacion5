@@ -625,6 +625,7 @@ namespace ProyectoProgV
                 {
 
                     producto = MetodosBD.buscarProducto(d.CodProducto);
+                    
 
                     dataGridViewFactura.Rows.Add(d.Cantidad, producto, d.Precio, d.Total);
 
@@ -647,15 +648,39 @@ namespace ProyectoProgV
              result = MessageBox.Show("¿Desea Anular esta Factura?", "Mensaje de confimación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
              if (result.Equals(DialogResult.Yes))
              {
-                 int resultado=MetodosBD.ActualizarAnulacionFactura(numFact, true);
-                 if(resultado >=1)
+                 bool anulado = MetodosBD.facturaAnulada(numFact);
+                 if(anulado)
                  {
-                     MessageBox.Show("Factura anulada");
+                     MessageBox.Show("Error la Factura esta anulada");
                  }
                  else
                  {
-                     MessageBox.Show("Factura no encontrada");
+                     int resultado = MetodosBD.ActualizarAnulacionFactura(numFact, true);
+                     if (resultado >= 1)
+                     {
+                         string producto;
+                         List<DetalleFactura> detalle = MetodosBD.cargarDetalleFactura(numFact);
+                         foreach (DetalleFactura d in detalle)
+                         {
+
+                             producto = MetodosBD.buscarProducto(d.CodProducto);
+                                  int stockViejo = MetodosBD.buscarStock2(producto);
+                             int newStock = stockViejo + d.Cantidad;
+
+                          MetodosBD.ActualizarStock2(producto, newStock);
+
+
+                            
+
+                         }
+                         MessageBox.Show("Factura anulada");
+                     }
+                     else
+                     {
+                         MessageBox.Show("Factura no encontrada");
+                     }
                  }
+                
                 
              }
 

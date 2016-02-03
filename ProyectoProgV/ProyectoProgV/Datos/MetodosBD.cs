@@ -65,6 +65,28 @@ namespace ProyectoProgV
             }
         }
 
+        public static bool facturaAnulada(string numFact)
+        {
+
+            bool bandera = false;
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select anulado from facturaCliente where numFact_cliente like '%{0}'", numFact), con);
+                //     comando.Parameters.AddWithValue("@cedula", cedula);  // para evitar el sql injection
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetBoolean(0);
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+        }
+
         public static string retornaCedulaEmpleado(string user)
         {
 
@@ -811,6 +833,7 @@ namespace ProyectoProgV
             string direccion;
             string telefono;
             string email;
+            string fecha;
            
             List<Usuarios> lista = new List<Usuarios>();
             using (SqlConnection conexion = Conexion.obtenerConexion())
@@ -830,7 +853,7 @@ namespace ProyectoProgV
 
                   
 
-                    Usuarios pro = new Usuarios("",cedula, nombre, apellido, direccion, telefono, email, "", "", "", "", "", false);
+                    Usuarios pro = new Usuarios("",cedula, nombre, apellido, direccion, telefono, email, "", "", "", "", "", false, "");
                         lista.Add(pro);
                     
 
@@ -1227,7 +1250,7 @@ namespace ProyectoProgV
             int retorno = 0; // en el caso de que no se inserter el registro retornara cero
             using (SqlConnection con = Conexion.obtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("Insert into usuario(cod_empleado, ced_empleado, nom_empleado, ape_empleado, dir_empleado, telf_empleado,email_empleado, user_empleado, contra_empleado, tipo_empleado, urlfoto_empleado, cod_ciudad, estado) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}')", usuario.Codigo, usuario.Cedula, usuario.Nombre, usuario.Apellido, usuario.Direccion, usuario.Telefono,  usuario.Email, usuario.User, usuario.Contra, usuario.TipoEmpleado, usuario.Url, usuario.CodigoCiudad, usuario.Estado), con);
+                SqlCommand comando = new SqlCommand(string.Format("Insert into usuario(cod_empleado, ced_empleado, nom_empleado, ape_empleado, dir_empleado, telf_empleado,email_empleado, user_empleado, contra_empleado, tipo_empleado, urlfoto_empleado, cod_ciudad, estado, fechaI) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}')", usuario.Codigo, usuario.Cedula, usuario.Nombre, usuario.Apellido, usuario.Direccion, usuario.Telefono, usuario.Email, usuario.User, usuario.Contra, usuario.TipoEmpleado, usuario.Url, usuario.CodigoCiudad, usuario.Estado, usuario.Fecha), con);
                 retorno = comando.ExecuteNonQuery();
 
                 con.Close();
@@ -1276,12 +1299,12 @@ namespace ProyectoProgV
             return retorno;
         }
 
-        public static int ActualizarUsuario(string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipo, string url , string ciudad, bool estado)
+        public static int ActualizarUsuario(string codigo, string cedula, string nombre, string apellido, string direccion, string telefono, string email, string user, string contra, string tipo, string url , string ciudad, bool estado, string fecha)
         {
             int retorno = 0; // en el caso de que no se borre el registro retornara cero
             using (SqlConnection con = Conexion.obtenerConexion())
             {
-                SqlCommand comando = new SqlCommand("update usuario set cod_empleado='" + codigo + "', ced_empleado='" + cedula + "', nom_empleado='" + nombre + "', ape_empleado='" + apellido + "', dir_empleado='" + direccion + "', telf_empleado='" + telefono + "', email_empleado='" + email + "', user_empleado='" + user + "', contra_empleado='" + contra + "', tipo_empleado='" + tipo + "', urlfoto_empleado='" + url + "', cod_ciudad='" + ciudad + "', estado='" + estado + "' where cod_empleado like '" + codigo + "'", con);
+                SqlCommand comando = new SqlCommand("update usuario set cod_empleado='" + codigo + "', ced_empleado='" + cedula + "', nom_empleado='" + nombre + "', ape_empleado='" + apellido + "', dir_empleado='" + direccion + "', telf_empleado='" + telefono + "', email_empleado='" + email + "', user_empleado='" + user + "', contra_empleado='" + contra + "', tipo_empleado='" + tipo + "', urlfoto_empleado='" + url + "', cod_ciudad='" + ciudad + "', estado='" + estado  +"', fechaI='" + fecha + "' where cod_empleado like '" + codigo + "'", con);
                 retorno = comando.ExecuteNonQuery();
                 con.Close();
             }

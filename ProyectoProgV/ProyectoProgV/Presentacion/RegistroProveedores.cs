@@ -466,7 +466,7 @@ namespace ProyectoProgV
             pictureEmail.Image = null;
 
 
-
+            pictureFecha.Image = null;
             pictureCiudad.Image = null;
 
 

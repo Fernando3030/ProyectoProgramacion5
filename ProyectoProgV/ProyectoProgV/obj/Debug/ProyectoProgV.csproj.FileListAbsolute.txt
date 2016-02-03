@@ -70,3 +70,5 @@ C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoPr
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormFacturaC.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormFacturaCliente.resources
 C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.reporteFacturaCliente.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormProveedoresParametros.resources
+C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\obj\Debug\ProyectoProgV.Presentacion.FormUsuariosParametros.resources
