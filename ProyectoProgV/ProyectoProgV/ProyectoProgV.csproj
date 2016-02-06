@@ -70,6 +70,7 @@
     <Compile Include="Entidad\ControlPagos.cs" />
     <Compile Include="Entidad\Movimiento.cs" />
     <Compile Include="Entidad\PagosFactura.cs" />
+    <Compile Include="Negocio\EnviarMail.cs" />
     <Compile Include="Presentacion\BuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,12 @@
       <DependentUpon>reporteFacturaCliente2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Presentacion\reporteFacturaClientePorFecha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteFacturaClientePorFecha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentacion\reporteProveedor.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,6 +204,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reporteProveedoresParametros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\reporteTodosFacturasClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteTodosFacturasClientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Presentacion\reporteUser.cs">
@@ -317,6 +330,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteFacturaCliente2.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\reporteFacturaClientePorFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteFacturaClientePorFecha.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\reporteProveedor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteProveedor.cs</LastGenOutput>
@@ -324,6 +341,10 @@
     <EmbeddedResource Include="Presentacion\reporteProveedoresParametros.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteProveedoresParametros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\reporteTodosFacturasClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteTodosFacturasClientes.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\reporteUser.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

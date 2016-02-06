@@ -53,7 +53,7 @@
             this.MaximizeBox = false;
             this.Name = "FormFacturaC";
             this.Resizable = false;
-            this.Text = "FormFacturaC";
+            this.Text = "Reporte de Ventas";
             this.Load += new System.EventHandler(this.FormFacturaC_Load);
             this.ResumeLayout(false);
 

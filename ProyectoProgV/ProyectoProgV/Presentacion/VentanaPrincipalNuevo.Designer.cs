@@ -37,8 +37,6 @@
             this.mItemCliente = new DevComponents.DotNetBar.RibbonBar();
             this.btnCliente = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnReportFactProvee = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
             this.btnReportFactClient = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
@@ -251,7 +249,6 @@
             // ribbonPanel2
             // 
             this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.ribbonBar7);
             this.ribbonPanel2.Controls.Add(this.ribbonBar6);
             this.ribbonPanel2.Controls.Add(this.ribbonBar5);
             this.ribbonPanel2.Controls.Add(this.ribbonBar1);
@@ -276,43 +273,6 @@
             this.ribbonPanel2.TabIndex = 4;
             this.ribbonPanel2.Visible = false;
             // 
-            // ribbonBar7
-            // 
-            this.ribbonBar7.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar7.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar7.ContainerControlProcessDialogKey = true;
-            this.ribbonBar7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar7.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnReportFactProvee});
-            this.ribbonBar7.Location = new System.Drawing.Point(403, 0);
-            this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(100, 97);
-            this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar7.TabIndex = 4;
-            this.ribbonBar7.Text = "Fact. Proveedores";
-            // 
-            // 
-            // 
-            this.ribbonBar7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnReportFactProvee
-            // 
-            this.btnReportFactProvee.Image = global::ProyectoProgV.Properties.Resources.Sales_report_icon;
-            this.btnReportFactProvee.Name = "btnReportFactProvee";
-            this.btnReportFactProvee.SubItemsExpandWidth = 14;
-            // 
             // ribbonBar6
             // 
             this.ribbonBar6.AutoOverflowEnabled = true;
@@ -334,7 +294,7 @@
             this.ribbonBar6.Size = new System.Drawing.Size(100, 97);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 3;
-            this.ribbonBar6.Text = "Fact. Cliente";
+            this.ribbonBar6.Text = "Ventas";
             // 
             // 
             // 
@@ -922,8 +882,6 @@
         private DevComponents.DotNetBar.ButtonItem btnReportUsuarios;
         private DevComponents.DotNetBar.RibbonBar ribbonBar6;
         private DevComponents.DotNetBar.ButtonItem btnReportFactClient;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar7;
-        private DevComponents.DotNetBar.ButtonItem btnReportFactProvee;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnAbrir;

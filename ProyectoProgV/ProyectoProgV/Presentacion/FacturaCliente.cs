@@ -8,12 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;  //importante esta libreria para que funcione
+using CrystalDecisions.Shared;
+using ProyectoProgV.Presentacion;
+using EnviaMail;
+
 
 namespace ProyectoProgV
 {
     public partial class FacturaCliente : MetroFramework.Forms.MetroForm
     {
         DateTime thisDay;
+        string urlEnvio = "";
+        string email = "";
        // DateTime fechita;
         string fechaActual;
         string codigoProducto = "";
@@ -529,10 +536,38 @@ namespace ProyectoProgV
                             
                         }
 
+                        string n = lblNumFact.Text;
+                        FormFacturaC form = new FormFacturaC();
+                        ReportDocument oRep = new ReportDocument();
+                        ParameterField pf = new ParameterField();
+                        ParameterFields pfs = new ParameterFields();
+                        ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                        pf.Name = "@numFact";
+                        pdv.Value = n;
+                        pf.CurrentValues.Add(pdv);
+                        pfs.Add(pf);
+                        form.crystalReportViewer1.ParameterFieldInfo = pfs;
+                        oRep.Load(@"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\Presentacion\reporteFacturaCliente2.rpt");
+                        oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\Facturas\Factura Nro."+ n +".pdf");
+                        urlEnvio = "C:\\Users\\Usuario\\Documents\\GitHub\\ProyectoProgramacion5\\Facturas\\Factura Nro." + n + ".pdf";
+                        //creamos nuestro objeto de la clase que hicimos
+                        email = MetodosBD.buscarEmailCliente(txtRUC.Text);
+                        btnEnviar.Enabled = true;
+
+                       
+                        
+                         
+                        
+                        
+                        form.crystalReportViewer1.ReportSource = oRep;
+
+                        form.Show();
+
                         txtCliente.Text = "";
                         txtRUC.Text = "";
                         txtDireccion.Text = "";
                         txtTelefono.Text = "";
+                        lblNumFact.Text = "";
                         dataGridViewProducto.ClearSelection();
                         dataGridViewFactura.Rows.Clear();
                         txtSubTotal.Text = "";
@@ -551,6 +586,20 @@ namespace ProyectoProgV
                         txtCantidad.Enabled = false;
                         txtEmpleado.Text = Login.ROL;
                         consumidorF = false;
+                        EnviarMail oMail = new EnviarMail();
+
+
+                        bool resultado = oMail.enviarCorreo("Gracias por comprar Att. Code Enterprise ", "Facturacion", email, urlEnvio);
+                        if (resultado)
+                        {
+                            MessageBox.Show("Mensaje enviado");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mensaje no enviado");
+                        }
+                      
+                       
            
 
                     }
@@ -669,9 +718,7 @@ namespace ProyectoProgV
 
                           MetodosBD.ActualizarStock2(producto, newStock);
 
-
-                            
-
+                         
                          }
                          MessageBox.Show("Factura anulada");
                      }
@@ -684,6 +731,24 @@ namespace ProyectoProgV
                 
              }
 
+        }
+
+        private void txtEnviar_Click(object sender, EventArgs e)
+        {
+            EnviarMail oMail = new EnviarMail();
+          
+
+            bool resultado=oMail.enviarCorreo("Gracias por comprar Att. Code Enterprise ", "Facturacion", email, urlEnvio);
+            if(resultado)
+            {
+                MessageBox.Show("Mensaje enviado");
+            }
+            else
+            {
+                MessageBox.Show("Mensaje no enviado");
+            }
+
+            btnEnviar.Enabled = false;
         }
 
       

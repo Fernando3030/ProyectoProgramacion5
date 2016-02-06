@@ -404,7 +404,20 @@ namespace ProyectoProgV
                     string c = MetodosBD.buscarCategoria(reader.GetString(1));
                     cbCategoria.SelectedIndex = cbCategoria.FindString(c);
                     string p = MetodosBD.buscarProveedor(reader.GetString(2));
-                    cbProveedor.SelectedIndex = cbProveedor.FindString(p);
+                    
+                       
+                    if (cbProveedor.FindString(p) == -1)
+                    {
+                        Console.WriteLine("entroo");
+                        cbProveedor.SelectedIndex = -1;
+                        cbProveedor.Text="Dado de Baja";
+                        //cbProveedor.Text = "Dado de Baja";
+                    }
+                    else{
+                        cbProveedor.SelectedIndex = cbProveedor.FindString(p);
+                    }
+                    
+                    
                    
                     txtProducto.Text = reader.GetString(3);
                     dateFecha.Value = Convert.ToDateTime(reader.GetString(4));

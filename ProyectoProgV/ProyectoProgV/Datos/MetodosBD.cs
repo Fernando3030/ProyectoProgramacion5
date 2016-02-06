@@ -322,6 +322,33 @@ namespace ProyectoProgV
         }
 
 
+        public static string buscarEmailCliente(string cedula)
+        {
+
+            string bandera = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select email_cliente from cliente where ced_cliente like '%{0}'", cedula), con);
+                //     comando.Parameters.AddWithValue("@cedula", cedula);  // para evitar el sql injection
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+
+
+
+
+        }
+
+
         public static bool buscarEstadoProveedor(string codigo)
         {
 
@@ -622,6 +649,29 @@ namespace ProyectoProgV
                 {
 
                     numF = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return numF;
+            }
+
+        }
+
+        public static bool buscarNumFactCliente(string codigo)
+        {
+
+            bool numF = false;
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select numFact_cliente from facturaCliente where numFact_cliente like '%{0}'", codigo), con);
+
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    numF = reader.GetBoolean(0);
 
                 }
 
