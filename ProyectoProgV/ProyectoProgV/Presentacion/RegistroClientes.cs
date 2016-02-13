@@ -103,6 +103,14 @@ namespace ProyectoProgV
 
 
             dataGridView.DataSource = MetodosBD.cargarClientes();
+            dataGridView.Columns[0].HeaderText = "Código";
+            dataGridView.Columns[1].HeaderText = "Cédula";
+            dataGridView.Columns[2].HeaderText = "Nombre";
+            dataGridView.Columns[3].HeaderText = "Apellido";
+            dataGridView.Columns[4].HeaderText = "Dirección";
+            dataGridView.Columns[5].HeaderText = "Teléfono";
+            dataGridView.Columns[6].HeaderText = "Email";
+            dataGridView.Columns[7].HeaderText = "Ciudad";
 
             dataGridView.ClearSelection();
             deshabilitar();

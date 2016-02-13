@@ -25,7 +25,8 @@ namespace ProyectoProgV.Presentacion
 
         private void reporteFacturaCliente_Load(object sender, EventArgs e)
         {
-
+            dateDesde.MaxDate = DateTime.Today;
+            dateHasta.MaxDate = DateTime.Today;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

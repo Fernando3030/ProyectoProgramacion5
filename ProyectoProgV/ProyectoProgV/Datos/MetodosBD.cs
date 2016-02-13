@@ -212,6 +212,32 @@ namespace ProyectoProgV
 
         }
 
+        public static string buscarImagen(string user)
+        {
+
+            string bandera = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select urlfoto_empleado from usuario where user_empleado like '%{0}'", user), con);
+                //     comando.Parameters.AddWithValue("@cedula", cedula);  // para evitar el sql injection
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetString(0) ;
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+
+
+
+
+        }
+
         public static string buscarContra(string codigo)
         {
 
@@ -375,6 +401,32 @@ namespace ProyectoProgV
 
         }
 
+
+        public static string  buscarCodProveedor(string proveedor)
+        {
+
+            string bandera = "";
+            using (SqlConnection con = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("Select cod_proveedor from proveedor where razon_social like '%{0}'", proveedor), con);
+
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    bandera = reader.GetString(0);
+
+                }
+
+                con.Close();
+                return bandera;
+            }
+
+
+
+
+        }
 
         public static bool buscarEstadoCategoria(string codigo)
         {
@@ -834,6 +886,50 @@ namespace ProyectoProgV
         }
 
 
+
+        public static List<Proveedor> cargarProveedorModificar()
+        {
+            string cod;
+            string nombre;
+            string ruc;
+            string direccion;
+            string telefono;
+            string email;
+            string ciudad;
+            string fecha;
+
+            bool estado;
+            List<Proveedor> lista = new List<Proveedor>();
+            using (SqlConnection conexion = Conexion.obtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("Select * from proveedor", conexion);
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    cod = reader.GetString(0);
+
+                    nombre = reader.GetString(1);
+                    ruc = reader.GetString(2);
+                    direccion = reader.GetString(3);
+                    telefono = reader.GetString(4);
+                    email = reader.GetString(5);
+                    ciudad = reader.GetString(6);
+                    estado = reader.GetBoolean(7);
+                    fecha = reader.GetString(8);
+
+                   
+                        Proveedor pro = new Proveedor(cod, nombre, ruc, direccion, telefono, email, ciudad, estado, fecha);
+                        lista.Add(pro);
+                    
+
+                }
+                conexion.Close();
+                return lista;
+
+            }
+        }
+
+
         public static List<ControlPagos> cargarControlP()
         {
             string numFact;
@@ -1087,6 +1183,7 @@ namespace ProyectoProgV
                 SqlCommand comando = new SqlCommand("Select cod_cliente, ced_cliente, nom_cliente, ape_cliente,dir_cliente, telf_cliente, email_cliente, cod_ciudad from cliente", conexion);
                 SqlDataAdapter da = new SqlDataAdapter(comando);
                 da.Fill(dt);
+                
                 conexion.Close();
 
             }

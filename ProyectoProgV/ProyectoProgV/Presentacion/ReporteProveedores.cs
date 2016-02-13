@@ -110,7 +110,8 @@ namespace ProyectoProgV
 
         private void ReporteProveedores_Load(object sender, EventArgs e)
         {
-
+            dateDesde.MaxDate = DateTime.Today;
+            dateHasta.MaxDate = DateTime.Today;
         }
 
       

@@ -32,6 +32,9 @@ namespace ProyectoProgV
 
         private void RegistroUsuarios_Load(object sender, EventArgs e)
         {
+
+            
+            dateFecha.MaxDate = DateTime.Today;
             cbCiudad.DisplayMember = "Ciud";  // el Ciud es el get y set de la clase Ciudad
             cbCiudad.ValueMember = "Codigo"; // Codigo es el get y set de la clase Ciudad
             cbCiudad.DataSource = MetodosBD.cargarCiudad();
@@ -39,6 +42,11 @@ namespace ProyectoProgV
            
             
             dataGridView.DataSource = MetodosBD.cargarUsuarios2();
+            dataGridView.Columns[0].HeaderText = "Código";
+            dataGridView.Columns[1].HeaderText = "Nombre";
+            dataGridView.Columns[2].HeaderText = "Apellido";
+            dataGridView.Columns[3].HeaderText = "Cédula";
+      
          
             dataGridView.ClearSelection();
             txtCodigo.Enabled = false;

@@ -729,7 +729,7 @@
             // 
             this.btnAnular.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnAnular.Highlight = true;
-            this.btnAnular.Location = new System.Drawing.Point(187, 662);
+            this.btnAnular.Location = new System.Drawing.Point(149, 662);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(86, 29);
             this.btnAnular.Style = MetroFramework.MetroColorStyle.Brown;
@@ -742,7 +742,7 @@
             // 
             this.btnSalir.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnSalir.Highlight = true;
-            this.btnSalir.Location = new System.Drawing.Point(276, 662);
+            this.btnSalir.Location = new System.Drawing.Point(241, 662);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 29);
             this.btnSalir.Style = MetroFramework.MetroColorStyle.Brown;
@@ -875,7 +875,7 @@
             this.btnEnviar.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnEnviar.ForeColor = System.Drawing.Color.Black;
             this.btnEnviar.Highlight = true;
-            this.btnEnviar.Location = new System.Drawing.Point(97, 662);
+            this.btnEnviar.Location = new System.Drawing.Point(11, 669);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(86, 29);
             this.btnEnviar.Style = MetroFramework.MetroColorStyle.Brown;
@@ -885,6 +885,7 @@
             this.btnEnviar.UseCustomForeColor = true;
             this.btnEnviar.UseSelectable = true;
             this.btnEnviar.UseStyleColors = true;
+            this.btnEnviar.Visible = false;
             this.btnEnviar.Click += new System.EventHandler(this.txtEnviar_Click);
             // 
             // FacturaCliente

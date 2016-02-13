@@ -140,7 +140,7 @@
             this.metroTabControl1.Controls.Add(this.tab2);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 85);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(642, 636);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
@@ -396,7 +396,7 @@
             // 
             this.dateEntrega.Enabled = false;
             this.dateEntrega.Location = new System.Drawing.Point(14, 129);
-            this.dateEntrega.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dateEntrega.MinimumSize = new System.Drawing.Size(0, 29);
             this.dateEntrega.Name = "dateEntrega";
             this.dateEntrega.Size = new System.Drawing.Size(164, 29);
             this.dateEntrega.Style = MetroFramework.MetroColorStyle.Brown;

@@ -33,7 +33,8 @@ namespace ProyectoProgV
 
 
             dataGridView.DataSource = MetodosBD.cargarCategoria();
-
+           
+          
             dataGridView.ClearSelection();
             deshabilitar();
         }
@@ -342,6 +343,17 @@ namespace ProyectoProgV
 
         private void dataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+
+            dataGridView.Columns[0].HeaderText = "Código";
+            dataGridView.Columns[0].Width = 200;
+
+            dataGridView.Columns[1].HeaderText = "Categoria";
+            dataGridView.Columns[1].Width = 200;
+
+            foreach (DataGridViewColumn columna in dataGridView.Columns)
+            {
+                columna.Width = 200;
+            }
             for (int count = 0; count < dataGridView.Rows.Count; count++)
             {
                 string codigo = (string)dataGridView.Rows[count].Cells["cod_categoria"].Value;

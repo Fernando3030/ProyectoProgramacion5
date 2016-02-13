@@ -59,6 +59,9 @@ namespace ProyectoProgV
 
         private void VentanaPrincipalNuevo_Load(object sender, EventArgs e)
         {
+
+            pictureProfile.Image = System.Drawing.Image.FromFile(MetodosBD.buscarImagen(Login.ROL));
+            pictureProfile.SizeMode = PictureBoxSizeMode.StretchImage;
             if (Login.roles == 1) // el 2 indica que se trata de una secretaria
             {
                 
@@ -100,13 +103,14 @@ namespace ProyectoProgV
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            // 32, 2
           //  for (int i = a; i > w; i--)
            // {
-                panelMenu.Width = 32;
-                panelMenu.Height = 2;
+               
              
             //}
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
             btnAbrir.Enabled = true;
             
         }
@@ -156,12 +160,16 @@ namespace ProyectoProgV
 
         private void ribbonControl1_Click(object sender, EventArgs e)
         {
-
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
             lectorPDF pdf = new lectorPDF();
             pdf.Show();
 
@@ -202,6 +210,55 @@ namespace ProyectoProgV
             this.Close();
             reporteFacturaCliente reportC = new reporteFacturaCliente();
             reportC.Show();
+        }
+
+        private void VentanaPrincipalNuevo_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void ribbonPanel1_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void menuRegistros_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void menuMercaderia_Click_1(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void menuFacturas_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
+        }
+
+        private void menuReportes_Click(object sender, EventArgs e)
+        {
+            panelMenu.Width = 32;
+            panelMenu.Height = 2;
+            btnAbrir.Enabled = true;
         }
 
        

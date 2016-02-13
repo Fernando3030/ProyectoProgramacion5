@@ -8,8 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CrystalDecisions.CrystalReports.Engine;  //importante esta libreria para que funcione
+
+
+using CrystalDecisions.CrystalReports.Engine; 
 using CrystalDecisions.Shared;
+
+
+
 using ProyectoProgV.Presentacion;
 using EnviaMail;
 
@@ -536,7 +541,15 @@ namespace ProyectoProgV
                             
                         }
 
-                        string n = lblNumFact.Text;
+                        string n = lblNumFact.Text; // aqui obtengo el numero de factura
+
+
+                                           
+
+
+
+
+                        
                         FormFacturaC form = new FormFacturaC();
                         ReportDocument oRep = new ReportDocument();
                         ParameterField pf = new ParameterField();
@@ -549,10 +562,7 @@ namespace ProyectoProgV
                         form.crystalReportViewer1.ParameterFieldInfo = pfs;
                         oRep.Load(@"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\ProyectoProgV\ProyectoProgV\Presentacion\reporteFacturaCliente2.rpt");
                         oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\GitHub\ProyectoProgramacion5\Facturas\Factura Nro."+ n +".pdf");
-                        urlEnvio = "C:\\Users\\Usuario\\Documents\\GitHub\\ProyectoProgramacion5\\Facturas\\Factura Nro." + n + ".pdf";
-                        //creamos nuestro objeto de la clase que hicimos
-                        email = MetodosBD.buscarEmailCliente(txtRUC.Text);
-                        btnEnviar.Enabled = true;
+                        
 
                        
                         
@@ -562,6 +572,9 @@ namespace ProyectoProgV
                         form.crystalReportViewer1.ReportSource = oRep;
 
                         form.Show();
+                        
+
+
 
                         txtCliente.Text = "";
                         txtRUC.Text = "";
@@ -586,6 +599,12 @@ namespace ProyectoProgV
                         txtCantidad.Enabled = false;
                         txtEmpleado.Text = Login.ROL;
                         consumidorF = false;
+
+                        
+                        urlEnvio = "C:\\Users\\Usuario\\Documents\\GitHub\\ProyectoProgramacion5\\Facturas\\Factura Nro." + n + ".pdf";
+                        //creamos nuestro objeto de la clase que hicimos
+                        email = MetodosBD.buscarEmailCliente(txtRUC.Text);
+                        btnEnviar.Enabled = true;
                         EnviarMail oMail = new EnviarMail();
 
 

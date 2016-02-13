@@ -106,6 +106,8 @@ namespace ProyectoProgV
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            cbProveedor.DataSource = MetodosBD.cargarProveedor2();
+           
             txtNroFactP.Text = "";
             txtCantidad.Text = "";
             txtTotalFact.Text = "";
@@ -140,6 +142,9 @@ namespace ProyectoProgV
 
         private void FacturaProveedores_Load(object sender, EventArgs e)
         {
+            
+            dateEntrega.MaxDate = DateTime.Today;
+            datePago.MaxDate = DateTime.Today;
             cbProveedor.DisplayMember = "Nombre";  // el Ciud es el get y set de la clase Categoria
             cbProveedor.ValueMember = "Codigo"; // Codigo es el get y set de la clase Categoria
             cbProveedor.DataSource = MetodosBD.cargarProveedor2();
@@ -151,6 +156,11 @@ namespace ProyectoProgV
 
             dataGridView.Rows.Clear();
             dataGridView.DataSource = MetodosBD.cargarControlPagos();
+            dataGridView.Columns[0].HeaderText = "Nro. Fact";
+            dataGridView.Columns[1].HeaderText = "Cod. Proveedor";
+            dataGridView.Columns[2].HeaderText = "Fecha E.";
+            dataGridView.Columns[3].HeaderText = "Cantidad";
+            dataGridView.Columns[4].HeaderText = "Total";
 
             dataGridView.ClearSelection();
 
@@ -158,6 +168,11 @@ namespace ProyectoProgV
 
             dataGridView2.Rows.Clear();
             dataGridView2.DataSource = MetodosBD.cargarPagosFactura();
+            dataGridView2.Columns[0].HeaderText = "Nro. Fact";
+            dataGridView2.Columns[1].HeaderText = "Fecha P.";
+            dataGridView2.Columns[2].HeaderText = "Nro. Cuenta";
+            dataGridView2.Columns[3].HeaderText = "Monto";
+            dataGridView2.Columns[4].HeaderText = "Banco";
 
             dataGridView2.ClearSelection();
         }
@@ -310,6 +325,8 @@ namespace ProyectoProgV
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            cbProveedor.DataSource = MetodosBD.cargarProveedor2();
+           
             btnModificar.Enabled = false;
             btnCargarFoto.Enabled = true;
             btnGuardar.Enabled = true;
@@ -351,7 +368,25 @@ namespace ProyectoProgV
                 {
                     txtNroFactP.Text = reader.GetString(0);
                     string p = MetodosBD.buscarProveedor(reader.GetString(1));
-                    cbProveedor.SelectedIndex = cbProveedor.FindString(p);
+                    string cd = MetodosBD.buscarCodProveedor(p);
+
+
+                    if (!MetodosBD.buscarEstadoProveedor(cd))
+                    {
+                        pictureProveedor.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\error.png");
+                        cbProveedor.DataSource = MetodosBD.cargarProveedorModificar();
+                        cbProveedor.SelectedIndex = cbProveedor.FindString(p);
+                        //cbProveedor.Text = "Dado de Baja";
+                        //cbProveedor.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        pictureProveedor.Image = null;
+                        cbProveedor.DataSource = MetodosBD.cargarProveedor2();
+                        cbProveedor.SelectedIndex = cbProveedor.FindString(p);
+                    }
+
+
                     dateEntrega.Value = Convert.ToDateTime(reader.GetString(2));
                     txtCantidad.Text = Convert.ToString(reader.GetInt32(3));
                          txtTotalFact.Text = Convert.ToString(reader.GetDecimal(4));
@@ -417,6 +452,7 @@ namespace ProyectoProgV
 
         private void btnNuevo2_Click(object sender, EventArgs e)
         {
+           
             txtCodCheque.Text = "";
             txtNumCuenta.Text = "";
             txtBanco.Text = "";
@@ -630,7 +666,7 @@ namespace ProyectoProgV
         private void btnModificar2_Click(object sender, EventArgs e)
         {
             btnModificar2.Enabled = false;
-           
+            
             btnGuardar2.Enabled = true;
             banderaModificar2 = true;
             txtCodCheque.Enabled = false;

@@ -38,6 +38,8 @@ namespace ProyectoProgV
 
         private void RegistrarProducto_Load(object sender, EventArgs e)
         {
+            
+            dateFecha.MaxDate = DateTime.Today;
             cbCategoria.DisplayMember = "Categoria1";  // el Ciud es el get y set de la clase Categoria
             cbCategoria.ValueMember = "Codigo"; // Codigo es el get y set de la clase Categoria
             cbCategoria.DataSource = MetodosBD.cargarCategoria2();
@@ -49,6 +51,15 @@ namespace ProyectoProgV
 
             dataGridView.Rows.Clear();
             dataGridView.DataSource = MetodosBD.cargarProductos();
+
+            dataGridView.Columns[0].HeaderText = "Código";
+            dataGridView.Columns[1].HeaderText = "Cód. Categoria";
+            dataGridView.Columns[2].HeaderText = "Cód. Proveedor";
+            dataGridView.Columns[3].HeaderText = "Producto";
+            dataGridView.Columns[4].HeaderText = "Fecha V.";
+            dataGridView.Columns[5].HeaderText = "Stock";
+            dataGridView.Columns[6].HeaderText = "Precio C.";
+            dataGridView.Columns[7].HeaderText = "Precio V.";
 
            
 
@@ -79,6 +90,7 @@ namespace ProyectoProgV
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            cbProveedor.DataSource = MetodosBD.cargarProveedor2();
             codigo = validacion.generarCodigo();
             txtCodigo.Text = codigo;
             txtProducto.Focus();
@@ -404,16 +416,20 @@ namespace ProyectoProgV
                     string c = MetodosBD.buscarCategoria(reader.GetString(1));
                     cbCategoria.SelectedIndex = cbCategoria.FindString(c);
                     string p = MetodosBD.buscarProveedor(reader.GetString(2));
+                    string cd = MetodosBD.buscarCodProveedor(p);
                     
                        
-                    if (cbProveedor.FindString(p) == -1)
+                    if (!MetodosBD.buscarEstadoProveedor(cd))
                     {
-                        Console.WriteLine("entroo");
-                        cbProveedor.SelectedIndex = -1;
-                        cbProveedor.Text="Dado de Baja";
+                        pictureProveedor.Image = System.Drawing.Image.FromFile("D:\\ingenieria en sistemas\\Fernando sexto semestre\\Programacion 5\\Programas n c# 6to semestre\\ProyectoProgV\\ProyectoProgV\\Resources\\error.png");
+                        cbProveedor.DataSource = MetodosBD.cargarProveedorModificar();
+                        cbProveedor.SelectedIndex = cbProveedor.FindString(p);
                         //cbProveedor.Text = "Dado de Baja";
+                        //cbProveedor.SelectedIndex = -1;
                     }
                     else{
+                        pictureProveedor.Image = null;
+                        cbProveedor.DataSource = MetodosBD.cargarProveedor2();
                         cbProveedor.SelectedIndex = cbProveedor.FindString(p);
                     }
                     
@@ -502,6 +518,8 @@ namespace ProyectoProgV
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+
+            cbProveedor.DataSource = MetodosBD.cargarProveedor2();
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             btnNuevo.Enabled = false;

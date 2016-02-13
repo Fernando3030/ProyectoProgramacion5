@@ -29,6 +29,12 @@ namespace ProyectoProgV
             dataGridView.Rows.Clear();
             dataGridView.DataSource = MetodosBD.cargarProductos3();
 
+            dataGridView.Columns[0].HeaderText = "Código";
+            dataGridView.Columns[1].HeaderText = "Producto";
+            dataGridView.Columns[2].HeaderText = "Fecha V.";
+            dataGridView.Columns[3].HeaderText = "Precio C.";
+            dataGridView.Columns[4].HeaderText = "Precio V.";
+
 
 
             dataGridView.ClearSelection();

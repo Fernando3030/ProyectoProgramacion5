@@ -25,7 +25,8 @@ namespace ProyectoProgV.Presentacion
 
         private void ReporteUsuarios_Load(object sender, EventArgs e)
         {
-
+            dateDesde.MaxDate = DateTime.Today;
+            dateHasta.MaxDate = DateTime.Today;
         }
 
         private void rbTodos_CheckedChanged(object sender, EventArgs e)

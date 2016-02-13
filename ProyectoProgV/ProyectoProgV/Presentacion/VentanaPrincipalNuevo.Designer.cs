@@ -67,10 +67,9 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new MetroFramework.Controls.MetroButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureProfile = new System.Windows.Forms.PictureBox();
             this.btnPerfil = new MetroFramework.Controls.MetroButton();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -82,7 +81,7 @@
             this.ribbonPanel4.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,6 +157,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Click += new System.EventHandler(this.ribbonPanel1_Click);
             // 
             // mItemProveedores
             // 
@@ -538,7 +538,7 @@
             this.ribbonPanel4.Location = new System.Drawing.Point(0, 61);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(737, 100);
+            this.ribbonPanel4.Size = new System.Drawing.Size(741, 100);
             // 
             // 
             // 
@@ -677,24 +677,28 @@
             this.menuRegistros.Name = "menuRegistros";
             this.menuRegistros.Panel = this.ribbonPanel1;
             this.menuRegistros.Text = "Registros";
+            this.menuRegistros.Click += new System.EventHandler(this.menuRegistros_Click);
             // 
             // menuMercaderia
             // 
             this.menuMercaderia.Name = "menuMercaderia";
             this.menuMercaderia.Panel = this.ribbonPanel4;
             this.menuMercaderia.Text = "Mercaderia";
+            this.menuMercaderia.Click += new System.EventHandler(this.menuMercaderia_Click_1);
             // 
             // menuFacturas
             // 
             this.menuFacturas.Name = "menuFacturas";
             this.menuFacturas.Panel = this.ribbonPanel3;
             this.menuFacturas.Text = "Facturas";
+            this.menuFacturas.Click += new System.EventHandler(this.menuFacturas_Click);
             // 
             // menuReportes
             // 
             this.menuReportes.Name = "menuReportes";
             this.menuReportes.Panel = this.ribbonPanel2;
             this.menuReportes.Text = "Reportes";
+            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
             // 
             // btnHelp
             // 
@@ -725,30 +729,19 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu.Controls.Add(this.btnCerrar);
             this.panelMenu.Controls.Add(this.pictureBox3);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
-            this.panelMenu.Controls.Add(this.pictureBox2);
+            this.panelMenu.Controls.Add(this.pictureProfile);
             this.panelMenu.Controls.Add(this.btnPerfil);
             this.panelMenu.Location = new System.Drawing.Point(573, 59);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(32, 2);
+            this.panelMenu.Size = new System.Drawing.Size(32, 4);
             this.panelMenu.TabIndex = 5;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Image = global::ProyectoProgV.Properties.Resources.arriba;
-            this.btnCerrar.Location = new System.Drawing.Point(54, 79);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
-            this.btnCerrar.TabIndex = 6;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ProyectoProgV.Properties.Resources.exitSesion;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 67);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 30);
             this.pictureBox3.TabIndex = 3;
@@ -756,7 +749,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(45, 42);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(45, 67);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(88, 31);
             this.btnCerrarSesion.TabIndex = 2;
@@ -764,18 +757,18 @@
             this.btnCerrarSesion.UseSelectable = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // pictureBox2
+            // pictureProfile
             // 
-            this.pictureBox2.Image = global::ProyectoProgV.Properties.Resources.userMenu;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pictureProfile.Image = global::ProyectoProgV.Properties.Resources.userMenu;
+            this.pictureProfile.Location = new System.Drawing.Point(3, 9);
+            this.pictureProfile.Name = "pictureProfile";
+            this.pictureProfile.Size = new System.Drawing.Size(41, 47);
+            this.pictureProfile.TabIndex = 1;
+            this.pictureProfile.TabStop = false;
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Location = new System.Drawing.Point(45, 3);
+            this.btnPerfil.Location = new System.Drawing.Point(45, 17);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(88, 31);
             this.btnPerfil.TabIndex = 0;
@@ -801,6 +794,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(702, 301);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ribbonButton1
             // 
@@ -831,6 +825,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaPrincipalNuevo";
             this.Load += new System.EventHandler(this.VentanaPrincipalNuevo_Load);
+            this.Click += new System.EventHandler(this.VentanaPrincipalNuevo_Click);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
@@ -839,7 +834,7 @@
             this.ribbonPanel4.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -886,11 +881,10 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureProfile;
         private MetroFramework.Controls.MetroButton btnPerfil;
         private System.Windows.Forms.PictureBox pictureBox3;
         private MetroFramework.Controls.MetroButton btnCerrarSesion;
-        private System.Windows.Forms.Button btnCerrar;
         private DevComponents.DotNetBar.ButtonItem btnHelp;
     }
 }
