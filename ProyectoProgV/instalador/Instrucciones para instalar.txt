@@ -1,0 +1,7 @@
+El instalador se encuentra en la siguiente ruta:
+1) Abra la carpeta instalador
+2) Luego dirígase a la carpeta Express
+3) Luego a la carpeta DVD-5	
+4) Luego a la carpeta DiskImages
+5) Luego a la carpeta Disk1
+6) Y finalmente dar doble click en setup
